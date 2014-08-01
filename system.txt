@@ -226,6 +226,7 @@ EXT@normal:2Cl bid from passed hand is artificial, and shows 10-11HCP and 3= M. 
 EXT@important:1H-1NT-2NT may be 4513, but this should be avoided. This hand is potentially misfitted, so even with 16HCP it may be better to bid it as WK.
 EXT@important:1Sp-2X-2Sp-2/3Y-3H is STR 6+Sp while 3Sp is 10-13 HCP 6+Sp. 1H-2X-2H-2/3Y-3H is WK 6+H, and 3Sp is STR.
 EXT@normal:Note, that 1H-2X-2Sp is still strong, the opener does not show 4 crd spade with weak hand. 1H-2X-2H-2Sp is NAT.
+EXT@critical:If 1M-2C gets doubled, bids are system on without Cl STOP, Pass forces to Rdbl except with 3=M INV and Rdbl offers support for 2Clxx. 2Cl responder may choose to bid 2M with 3M INV, or 3M/4M with SLI/GF and short Cl insteed of Rdbl. Over Pass from 1M opener and Rdbl from 2Cl responder all bids are system on with Cl STOP.
 
 #Entry for situation: 9
 1M competition
@@ -362,12 +363,22 @@ Weak two suiter 2M opening
 
 2M-2S/3m/4m@normal:P/C
 2M-2N@normal:R, asking strength and other suit
-2H-2N-3C@normal:Cl no ZONE, bid 3H over 3D F1 or pass 3H NF with weak
-2H-2N-3D/3N@normal:D, 3D is WK, 3NT is STR
-2H-2N-3H/3S@normal:Sp, 3H is WK, 3Sp is STR
-2S-2N-3C/3H@normal:Cl, 3Cl is WK, 3H is STR
-2S-2N-3D/3S@normal:D, 3D is WK, 3Sp is STR
-3N/4M/4oM/5m@normal:TP, except 2Sp-5Cl which is still P/C
+2M-2N-3C@normal:Cl no ZONE, 3D is R asking further, 4Cl is ORKC
+2H-2N-3C-3D-3H@normal:WK, over this 3Sp is asking for short suit, with responses 3NT: Sp, 4Cl: D, 4D: both
+2H-2N-3C-3D-3S/3N/4C@normal:STR Cl, with short suit responses 3Sp: Sp, 3NT: D, 4Cl: both
+2H-2N-3D@normal:WK D, over this 3Sp is asking for short suit, with responses 3NT: Sp, 4Cl: Cl, 4D: both
+2H-2N-3H@critical:WK Sp, over this 4Cl is asking for short suit, with responses 4D: Cl, 4H: D, 4Sp: 5611/6511, over this 4NT is RKC in H, 5Cl is RKC in Sp
+2H-2N-3S@important:STR Sp, over this 4Cl is asking for short suit, with reponses 4D: Cl, 4H: D, 4Sp: both, over this 4NT is RKC in H, 5Cl is RKC in Sp
+2H-2N-3N@normal:STR D, over this 4Cl is asking for short suit, with reponses 4D: Cl, 4H: Sp, 4Sp: both
+2S-2N-3C-3D-3H@important:WK Cl, over this 4Cl is ORKC, 4D is asking for short suit with responses 4H: H, 4Sp: D, 4NT: both
+2S-2N-3C-3D-3S/3N/4C@normal:STR Cl, with short suit responses, 3Sp: H, 3NT: D, 4Cl: both
+2S-2N-3D@normal:WK D, over this 3H is short suit asking with responses 3Sp: H, 3NT: Cl, 4Cl: both
+2S-2N-3H/3S/3N@important:STR D, with short 3H: H, 3S: Cl, 3NT: both, over this 4D is ORKC
+4oM/5m@normal:TP, except 2Sp-5Cl which is still P/C
+EXT@important:With the exception of when the 2H opener's side suit is Sp, once 2M opener has shown full distribution 3M or the first non-TP bid is R, and our line may  nly play the opener's side suit on a slam level. Over this R bid the first step shows a void, the next 4 steps are RKC responses in M with singleton.
+EXT@important:After 2M opener has declared it's suits, and has shown a M+m two-suiter, the 4m bid is ORKC. If the strong hand wishes to asks with the minor suit as trump, it has the bid a 4m ORKC immediately after the response over 2NT.
+EXT@important:If any R bid get's doubled, Pass/Rdbl become steps in the responding structure. If a R response is doubled, Pass takes the places of the first non-TP  id, and thus becomes an asking bid. This logic only applies after weak two suiter 2M opening in the system.
+EXT@normal:Over 2M-(Dbl), Pass is TP, Rdbl shows a suit and asks 2M opener to bid his first short suit. Otherwise system is on.
 
 #Entry for situation: 17
 2NT opening
@@ -411,7 +422,7 @@ EXT@normal:If SPL bid gets doubled, then Rdbl shows 1st round control, pass deni
 EXT@important:GUCI in Lebensohl situations. This means that 3Cl is NAT WK not INV, and over 2NT that would be Lebensohl, the better minor is bid.
 EXT@normal:Over our 2Cl overcall, 2D asks 4 card major and shows INV+ values
 EXT@normal:Convention against both strong and weak NT opening: Multi Landy.
-EXT@normal:Against precision 1Cl opening: Dbl strong, usually one suiter, 1D: majors, 1NT: minors, otherwise natural. Over 1Cl-1D: Dbl majors, 1NT minors, other bids are natural including 2D. Against STR 2Cl opening 2D: majors, 2NT: minors, other bids are natural. Against STR 2D opening 2D: majors, 2NT minors, other bids are natural. Against NAT 2NT opening all bids are natural, 3NT is minors.
+EXT@normal:Against precision 1Cl opening: Dbl strong, usually one suiter, 1D: majors, 1NT/2NT/3NT: minors, otherwise natural. Over 1Cl-1D: Dbl majors, NT: minors, other bids are natural including 2D. Against STR 2Cl opening 2D: majors, 2NT/3NT: minors, other bids are natural. Against STR 2D opening 2D: majors, 2NT/3NT minors, other bids are natural. Against NAT 2NT opening all bids are natural, 3NT is minors.
 
 #Entry for situation: 19
 Defense

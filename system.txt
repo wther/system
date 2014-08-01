@@ -150,6 +150,7 @@ Lebel and 4th suit
 1m-1M-2m-2m+1-2Y/3Y@normal:Bidding the 4th suit under 3M is STR, and shows stopper, normally looks for stopper in the suit of the R
 1m-1M-2m-2m+1-2N@normal:WK, and stopper in the 4th suit, 3m is TP other bids are NAT GF
 1m-1M-2m-2m+1-3m@normal:WK, nothing to say, any bid is NAT GF if not passed by 1M responder
+1m-1M-2m-2m+1-3H@critical:NAT, GF, 54+
 1m-1M-2m-2m+1-3M@normal:If 2M bid was available this is 3 card M support and STR, otherwise (2)3 card M support and WK
 1m-1M-2m-2m+1-3N@normal:STR, and if both the suit of the R and the 4th suit can be bid as STR and stopper then this shows stopper in both suit, otherwise only in the suit that could not bid as stopper. See example below.
 1D-1H-2D-2S-3S@important:Only exception for the rule above, this is 3 card M support and STR
@@ -331,8 +332,6 @@ EXT@normal:After a Gazzilli 2Cl, if opener doesn't pass a NF bid or doesn't acce
 4C@critical:65+M GF, over which 4D asks for the longer
 4D/4H@important:Transfer to H/Sp, 4M+1 is RKC, other bids are Exclusion, if M=H 4NT=Exclusion Sp
 4S@important:NAT TP
-EXT@important:4Cl/4D is transfer to H/Sp directly over 1NT opening or after 1NT-2Cl-2D. Thus 4H/4Sp is TP over 1NT-2Cl-2D as well.
-EXT@normal:1NT-2C-2D-2H may be 55 or even 6H4Sp. H is always better then Sp.
 
 #Entry for situation: 13
 Absolute force 2Cl opening
@@ -467,7 +466,7 @@ EXT@important:Against 2NT WK minors and 3NT Gambling, 3/4Cl is majors with bette
 Defense
 *
 
-EXT@important:Attitude leads against NT and 3rd/5th leads against suit. Lead top of inner sequence if KJT, QT9 and 2nd if AJT, KT9, QT9, JT9.
+EXT@critical:4th best leads against NT from suits with honor, highest sacrificable otherwise. 3rd/5th leads against suit. Lead top of inner sequence if KJT, QT9 and 2nd if AJT, KT9, QT9, JT9.
 EXT@normal:Smallest card against NT means two honors or only suit to defeat contract. Highest card denies an honor or explicitly asks for a switch.
 EXT@normal:Leading K from AK suggest a doubleton or shortness in the suit that the player will consequently play. Against contracts on the 5th level or higher, or against doubled contracts on the 4th, lead the K from A/K so partner can give count, as he would signal suit preference in case the ace was lead. If the A is lead from AK against high contracts that suggest the doubleton or the shortness in the suit consequently played.
 EXT@important:Anti-lead directing doubles from only that hand that showed a 5+ suit during auction. His partner's double shows top honor in the suit. If partners natural 1M/2M overcall gets doubled, than Rdbl is Rosenkrantz, showing doubleton and a top honor.

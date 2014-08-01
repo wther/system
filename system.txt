@@ -309,16 +309,18 @@ EXT@normal:After a Gazzilli 2Cl, if opener doesn't pass a NF bid or doesn't acce
 1NT Opening
 1N*
 
-2C-Over 2D@critical:2H Junk 43+, 2Sp: GI 5Sp, 3H/3Sp Smolen, 3m is NAT GF
+2C-Over 2D-2H@critical:5H4Sp INV, NF
+2C-Over 2D-2S@critical:5Sp INV, NF, 5332, 5422, 5431
+2C-Over 2D-3M@important:Smolen, 5oM-4M GF
 2C-Over 2H@normal:2Sp: GI 5Sp, 3Sp BAL/SPL SLI where 3NT asks and 4H shows SPL
 2C-Over 2S@normal:3H: BAL SLI in Sp
-2D-2H-2S@critical:5H4Sp GI
-2D-2H-2N/3C@critical:INV+, 4+Cl/D
+2C-Over 2M@critical:2NT INV with 4oM, 3NT GF with 4oM
+2D-2H-2S@critical:5H GI, 5332/5422/5431
+2D-2H-2N/3C@critical:INV+, 4+Cl/D, 55+ if only GI
 2D-2H-3D@critical:INV= or SLI with 6+H
 2D-2H-3H@critical:INV, NF, 5Sp-5H
-2D-2H-3H@@critical:55 GF
 2D-2H-3S/4C/4D@normal:SPL, SLI
-2H-2S-2N/3C@critical:INV+ 4+Cl/D
+2H-2S-2N/3C@critical:INV+ 4+Cl/D, 55+ if only GI
 2H-2S-3D@critical:WK 55+ H and Sp, either WK or GF (in this case he'll bid 3NT over 3M).
 2H-2S-3H@critical:INV= or SLI with 6+Sp
 2S@normal:BAL INV or 6+Cl, bid 2NT if wouldn't accept BAL INV, 3M from responder is SPL
@@ -326,8 +328,9 @@ EXT@normal:After a Gazzilli 2Cl, if opener doesn't pass a NF bid or doesn't acce
 3C@normal:SO, 55+ in minors
 3D@normal:GF, minors, 3H/Sp shows preference in Cl/D, 3NT is TP
 3M@normal:SPL in M, GF
-4C/4D@important:Transfer to H/Sp, 4M+1 is RKC, other bids are Exclusion, if M=H 4NT=Exclusion Sp
-4H/4S@important:TP
+4C@critical:65+M GF, over which 4D asks for the longer
+4D/4H@important:Transfer to H/Sp, 4M+1 is RKC, other bids are Exclusion, if M=H 4NT=Exclusion Sp
+4S@important:NAT TP
 EXT@important:4Cl/4D is transfer to H/Sp directly over 1NT opening or after 1NT-2Cl-2D. Thus 4H/4Sp is TP over 1NT-2Cl-2D as well.
 EXT@normal:1NT-2C-2D-2H may be 55 or even 6H4Sp. H is always better then Sp.
 

@@ -103,13 +103,14 @@ EXT@normal:Basically TWCHBK over 1Cl-1D-1NT. Over 2Cl is either 5D4Cl INV or som
 1M-2D@normal:Reverse, 2oM/2M F1, 2NT/3m GF; 2NT/3Cl rebid or 2M-3M by opener is NF
 1M-2H@normal:Reverse, 2M/2NT F1, 2NT/3m GF; 2NT/3m rebid or 2Sp-3Sp by opener is NF
 1M-2M@important:2Sp over 2H and 3H over 2Sp is GF asking, 2NT is always NF INV with NAT responses (3M: BAL 4 card), 3NT is TP and should be passed with 4 card support if hand fits NT contract
-1M-2S@normal:F2NT, mini/maxi H or GF in m, responses are 3m: GF m, 3mm: mini mm, 3H: mini Sp, 3Sp: maxi Sp, 4Cl: maxi Cl
 1M-2N@normal:18-19 QBAL, Wolff
 1H-2H-2S-2N/3om/3N/4om@important:Under 3M 3 card support, over 3M 4 card support. Shortness in NT=Sp/om.
 1H-2H-2S-3m@normal:3 card support, QBAL
 1H-2H-2S-3H@normal:STR 4 card support
 1H-2H-2S-3S@important:NAT, 4Sp-3M
 1H-2H-2S-4X/4M@normal:SPL/BAL, WK 4 card support
+1H-2S@normal:F2NT, mini/maxi H or GF in m, responses are 3m: GF m, 3om: mini mm, 3H: mini Sp, 3Sp: maxi Sp, 4Cl: maxi Cl
+1S-2H@critical:Natural reverse 4=H5+m, or 6+m GF, with the latter opener will mostly bid 3NT, and therefore it is forbidden to bid 4H
 1S-2S-3H-3S/3N@important:UBAL/BAL 3 card support
 1S-2S-3H-4om/4H@normal:SPL 4 card support
 1S-2S-3H-4m/4S@normal:STR/WK BAL 4 card support
@@ -430,18 +431,19 @@ EXT@important:Rubensohl over 1NT over call and 1m-2X and 1H-2Sp(here 3H is compe
 EXT@important:Penalty doubles from both party after CS double. Double in reopening position is "less" penalty.
 EXT@normal:1m/1M-(Pass/1X)-(Dbl/1Y/1N)-2Z-2NT is Mouse, thus showing INV values. NAT continuation.
 EXT@normal:DONT escaping if 1NT gets penalty doubled. If double is ART, then system is on.
-EXT@normal:Over Stayman's double, redouble offers to play 2Clxx, pass shows stopper or wants 2Clxx, bidding denies stopper
-EXT@normal:Over Transfer's double, 2M/Rdbl is 3crd M and with/without stopper, pass shows doubleton
-EXT@important:If other ART bid gets doubled below 3NT then Rdbl is stopper with A or K. NT bid is double stopper without A or K. CB is void. Bidding a suit shows singleton. Pass is everything else after which Rdbl is asking for stopper.
 EXT@normal:If SPL bid gets doubled, then Rdbl shows 1st round control, pass denies it. Rdbl from SPL bidder shows void.
 EXT@important:GUCI in Lebensohl situations. This means that 3Cl is NAT WK not INV, and over 2NT that would be Lebensohl, the better minor is bid.
 EXT@normal:Over our 2Cl overcall, 2D asks 4 card major and shows INV+ values
 EXT@normal:Convention against both strong and weak NT opening: Multi Landy.
 EXT@normal:Against precision 1Cl opening: Dbl strong, usually one suiter, 1D: majors, 1NT/2NT/3NT: minors, otherwise natural. Over 1Cl-1D: Dbl majors, NT: minors, other bids are natural including 2D. Against STR 2Cl opening 2D: majors, 2NT/3NT: minors, other bids are natural. Against STR 2D opening 2D: majors, 2NT/3NT minors, other bids are natural. Against NAT 2NT opening all bids are natural, 3NT is minors.
-EXT@critical:Against 2NT WK minors and 3NT Gambling, 3/4Cl is majors with better H, 3/4D is majors with better Sp, Dbl is STR, Dbl after Dbl is PEN.
 EXT@critical:Any Rdbl from passed hand shows maximum passed hand if otherwise non-conventional.
 EXT@critical:Over (1m)-2m-(Pass)-???: 2D is pick-a-major F1, 3m is 33+M INV, 2NT is GI+ R, over which 3m is 55M STR SPL, 3H is WK 55, 3Sp is 6H5Sp, 3NT is 6Sp5H
 EXT@critical:Over (1M)-2M-(Pass)-???: 3Cl is pick-a-minor, 3D is INV 3+oM, 2NT is GI+ over which 3m is WK 55+, 3H/Sp is STR 55+ with H=Cl and Sp=D
+EXT@modified:Save The System situation over 1NT-(P)-2Cl/2Sp-(Dbl), 1NT-(P)-2Sp-(Dbl), 2NT-(P)-3Cl-(Dbl), 1M-(P)-2Cl-(Dbl), over Gazzili 2Cl's double, over Gazzilli 2Cl-2D's double, but not over 1M-(P)-2Cl-(P)-2D-(Dbl). Redouble offers to play 2Clxx, pass shows stopper or wants 2Clxx, bidding denies stopper
+EXT@modified:Over Transfer's double, 2M/Rdbl is 3crd M and with/without stopper, pass shows doubleton. For example over 1NT-(P)-2D/2H-(Dbl), 2NT-(P)-3D/3H/4D/4H-(Dbl), 1NT-(P)-4C/4D-(Dbl), 1M-(Dbl)-2X-(Dbl). Rdbl after pass is re-transfer.
+EXT@modified:PODI, PORI, PEDO over double of 4NT/Exclusion RKCB, Spiral step, ORKC response, or two-suiter 2M's ART R.
+EXT@modofied:Automatic Ace Redouble situation in any other situation that is not otherwise specified, for example over CB, Splinter, FIT INV CB, or over normal RKCB's double if not 4NT. If double was below 3NT then Rdbl is stopper with A or K. NT bid is double stopper without A or K. CB is void. Bidding a suit shows singleton. Pass is everything else after which Rdbl is asking for stopper.
+EXT@critical:Against 2NT WK minors and 3NT Gambling, 3/4Cl is majors with better H, 3/4D is majors with better Sp, Dbl is STR, Dbl after Dbl is PEN.
 
 #Entry for situation: 19
 Defense
@@ -457,14 +459,14 @@ Extension
 *
 
 EXT@important:Over 3D/3H/3Sp preemptive opening 4Cl is ORKC in the suit of the opener. Over 3Cl/4Cl preemptive opening 4D is RKC in Cl. Over 4D/4H/4Sp opening any 4M bid (including 4H-4Sp) is TP, 4NT is RKC.
-EXT@normal:Exclusion, Serious, PODI, PORI, PEDO and PNS-ROBI
+EXT@normal:Exclusion, Serious, PODI, PORI, PEDO, but no classic PNS-ROBI
 EXT@normal:Multi against multi 2D opening (Double shows major)
 EXT@important:When 4m is unspecified by the system and could be ORKC or NAT too, it is always ORKC if the line is known to be GI+(A) or there isn't a bid that could show GF values without promising anything else below 3NT(B). Otherwise if partner has bid an NF bid and the opponent following passed or doubled(C) or partner was a preemptive opener (D) 4m is NAT. In any other case, if 6m is remotely possible 4m is ORKC (E). Note that jumping 4m bids are usually SPL in GF, and are not an exception to the rule, as jumps in GF are specified as SPL by the system.
 EXT@important:Examples for the rule above. 1Cl-1H-2Sp-2NT-3Cl-4Cl (ORKC as in A), 1H-2Cl-2H-2NT-3NT-4Cl (ORKC as in A). 1m-(3M)-4m (ORKC as in B), 1NT-(3X/4Cl)-4m (ORKC as in B). 1m-3m-4m (NAT as in C), (1/2X)-Dbl-(Pass/1/2Y)-2m-(Pass)-4m (NAT as in C). 3D-4D (NAT as in D), 1Cl-(Pass)-1H-(2Sp)-Pass-(Pass)-4Cl (ORKC as in E).
 EXT@important:Spiral continuation after RKCB/ORKC. Opponents 5+ suit goes last, responders shortness is not a step. Default order is Sp-H-D-Cl. Spiral steps are: asking the queen, asking from the first king, from the last king, from the second queen, and the jacks including the trump jack.
 EXT@important:After the first spiral ask the questioning queue for both players will not change. The bids skipped by the responder show held cards, the bids skipped by the questioner show cards he's not interested in. First relay over is always denying/asking the next cards in the queue.
 EXT@critical:CB on the 4th level shows 1st or 2nd round control. If no CB was bid on the 4th level (SPL is not considered CB), CB on the 5th level shows 1st or 2nd round control, otherwise CB on the 5th level shows 1st round control (A or void). CB in the partner's suit can only be bid with A or K, on both the 4th and 5th level.
-EXT@critical:4NT is always forcing after ORKC. Over 4M+1 RKCB or 4m ORKC additinal 4 bids (03,14,2,2+Q) may be bid if responder wishes to bid void.
+EXT@modified:4NT is always forcing after ORKC. Over 4M+1 RKCB or 4m ORKC additinal 4 bids (03,14,2,2+Q) may be bid if responder wishes to bid void.
 
 #Entry for situation: 21
 Famous historical events

@@ -350,12 +350,17 @@ Weak 2X opening
 2S-3X@normal:Weak, usually singleton in Sp
 2S-3Y@normal:STR, NAT, as the 2X opener is not normally 5332 or 4Sp5X22 opener can bid his 4 card suit
 2S-3S@normal:WK, 3+ support, NF
-2N@normal:If 2X=2D this is 5+H and F1, otherwise this GI+ R and asking and responses are 3Cl: WK/BS, 3D: WK/GS, 3H: STR/BS, 3Sp: STR/GS. If 2M was NV opening BS means 5 card suit, and GS means six card suit. If 2M was V opening (or overcall) GS is six card and contains exactly two top honors (with AKQxxx bid 3NT).
+2N@normal:If 2X=2D this is 5+H and F1, otherwise this is GI+ R and asking
+2N-3C@normal:WK/BS, if 2M was NV opening BS means 5 card suit
+2N-3D@normal:WK/GS, If 2M was V opening (or overcall) GS is six card and contains exactly two top honors (with AKQxxx bid 3NT)
+2N-3H@normal:STR/BS, GF, 2H-2NT-3X-3Sp is NAT 5+Sp F1, 2Sp-2NT-3C/3D-3Sp is TP, 2Sp-2NT-3H-3Sp is GF pick-a-game or SLI
+2N-3S@normal:STR/GS, GF
 3m@normal:TP
 4M@normal:TP
 EXT@normal:Few tips to remember the 2M-2NT responses: 3D is always GS, this way the opponents have less opportunity to double for D lead against 3NT as GS suggest a 4M for game. The mathematicians way is to take the two variables (strength and suit), and alternate the bids accordingly to the binary system (00, 01, 10, 11).
 EXT@normal:I've decided not to play 2H-2Sp-2NT and 2D-2Sp-2NT is WK 3+Sp, as this is such a marginally small part of the system that it doesn't worth to complication
 EXT@important:After NV opening the good/bad suit equals 6/5 cards in the suit.
+EXT@critical:Over 2M-2NT-3X: 3NT/4H/4Sp is always TP, 4m is CB SLI, RKCB is only possible with 4m CB first or after 2Sp-2NT-3H-3Sp.
 
 #Entry for situation: 16
 Weak two suiter 2M opening
@@ -375,7 +380,7 @@ Weak two suiter 2M opening
 2S-2N-3D@normal:WK D, over this 3H is short suit asking with responses 3Sp: H, 3NT: Cl, 4Cl: both
 2S-2N-3H/3S/3N@important:STR D, with short 3H: H, 3S: Cl, 3NT: both, over this 4D is ORKC
 4oM/5m@normal:TP, except 2Sp-5Cl which is still P/C
-EXT@important:With the exception of when the 2H opener's side suit is Sp, once 2M opener has shown full distribution 3M or the first non-TP bid is R, and our line may  nly play the opener's side suit on a slam level. Over this R bid the first step shows a void, the next 4 steps are RKC responses in M with singleton.
+EXT@important:With the exception of when the 2H opener's side suit is Sp, once 2M opener has shown full distribution 3M or the first non-TP bid is R, and our line may  nly play the opener's side suit on a slam level. Over this R bid the first step shows a void, the next 4 steps are RKC responses in M with singleton. If void is impossible due to 6511 distribution, than only RKC responses are given.
 EXT@important:After 2M opener has declared it's suits, and has shown a M+m two-suiter, the 4m bid is ORKC. If the strong hand wishes to asks with the minor suit as trump, it has the bid a 4m ORKC immediately after the response over 2NT.
 EXT@important:If any R bid get's doubled, Pass/Rdbl become steps in the responding structure. If a R response is doubled, Pass takes the places of the first non-TP  id, and thus becomes an asking bid. This logic only applies after weak two suiter 2M opening in the system.
 EXT@normal:Over 2M-(Dbl), Pass is TP, Rdbl shows a suit and asks 2M opener to bid his first short suit. Otherwise system is on.
@@ -405,7 +410,7 @@ EXT@normal:Over 2M-(Dbl), Pass is TP, Rdbl shows a suit and asks 2M opener to bi
 5m@normal:TP
 EXT@normal:Puppet alters the behavior of the Minor Stayman.  After 2NT-3Cl-3D the 4Sp/4NT response may be present as 4 card bid is not necessarily bid. In case of 2NT-3Cl-3D-3H-3Sp which shows maximum 5 cards in the majors, the 4+m minor response is always 5m332.
 EXT@important:After 4NT NOFIT or 4NT no 4 card minor of minor stayman, 5NT is SLI to 6NT with 10-11HCP.
-EXT@important:If 2NT is overcalled on the 3 level 2NT-(3X)-???, 3Y is F1 NAT, Dbl is PEN, 3NT is TP, 4Cl is SLI 6+Cl, 4D/4H is TRF, 4Sp is SLI 6+D and 4NT is 55+ two suiter. Pass is F1 and either BAL which is not PEN or WK, thus Pass and then 4X over 2NT opener's Dbl is TP.
+EXT@critical:If 2NT is overcalled on the 3 level 2NT-(3X)-???, 3Y is F1 NAT, Dbl is T/O, 3NT is TP, 4Cl is SLI 6+Cl, 4D/4H is TRF, 4Sp is SLI 6+D and 4NT is 55+ two suiter. Pass is F1 and either QBAL or WK, thus Pass and then 4X over 2NT opener's Dbl is TP.
 
 #Entry for situation: 18
 Competitive auctions
@@ -423,6 +428,10 @@ EXT@important:GUCI in Lebensohl situations. This means that 3Cl is NAT WK not IN
 EXT@normal:Over our 2Cl overcall, 2D asks 4 card major and shows INV+ values
 EXT@normal:Convention against both strong and weak NT opening: Multi Landy.
 EXT@normal:Against precision 1Cl opening: Dbl strong, usually one suiter, 1D: majors, 1NT/2NT/3NT: minors, otherwise natural. Over 1Cl-1D: Dbl majors, NT: minors, other bids are natural including 2D. Against STR 2Cl opening 2D: majors, 2NT/3NT: minors, other bids are natural. Against STR 2D opening 2D: majors, 2NT/3NT minors, other bids are natural. Against NAT 2NT opening all bids are natural, 3NT is minors.
+EXT@critical:Against 2NT WK minors and 3NT Gambling, 3/4Cl is majors with better H, 3/4D is majors with better Sp, Dbl is STR, Dbl after Dbl is PEN.
+EXT@critical:Any Rdbl from passed hand shows maximum passed hand if otherwise non-conventional.
+EXT@critical:Over (1m)-2m-(Pass)-???: 2D is pick-a-major F1, 3m is 33+M INV, 2NT is GI+ R, over which 3m is 5M STR SPL, 3H is WK 55, 3Sp is 6H5Sp, 3NT is 6Sp5H
+EXT@critical:Over (1M)-2M-(Pass)-???: 3Cl is pick-a-minor, 3D is INV 3+oM, 2NT is GI+ over which 3m is WK 55, 3H/Sp is STR 55 with H=Cl and Sp=D
 
 #Entry for situation: 19
 Defense
@@ -444,6 +453,7 @@ EXT@important:When 4m is unspecified by the system and could be ORKC or NAT too,
 EXT@important:Examples for the rule above. 1Cl-1H-2Sp-2NT-3Cl-4Cl (ORKC as in A), 1H-2Cl-2H-2NT-3NT-4Cl (ORKC as in A). 1m-(3M)-4m (ORKC as in B), 1NT-(3X/4Cl)-4m (ORKC as in B). 1m-3m-4m (NAT as in C), (1/2X)-Dbl-(Pass/1/2Y)-2m-(Pass)-4m (NAT as in C). 3D-4D (NAT as in D), 1Cl-(Pass)-1H-(2Sp)-Pass-(Pass)-4Cl (ORKC as in E).
 EXT@important:Spiral continuation after RKCB/ORKC. Opponents 5+ suit goes last, responders shortness is not a step. Default order is Sp-H-D-Cl. Spiral steps are: asking the queen, asking from the first king, from the last king, from the second queen, and the jacks including the trump jack.
 EXT@important:After the first spiral ask the questioning queue for both players will not change. The bids skipped by the responder show held cards, the bids skipped by the questioner show cards he's not interested in. First relay over is always denying/asking the next cards in the queue.
+EXT@critical:CB on the 4th level shows 1st or 2nd round control. If no CB was bid on the 4th level (SPL is not considered CB), CB on the 5th level shows 1st or 2nd round control, otherwise CB on the 5th level shows 1st round control (A or void). CB in the partner's suit can only be bid with A or K, on both the 4th and 5th level.
 
 #Entry for situation: 21
 Famous historical events
@@ -451,5 +461,6 @@ Famous historical events
 
 EXT@important:(Pass)-1Cl-(Pass)-1Sp-(2H)-Dbl-(5H)-???: Pass is forcing, 5NT is RKC (Szalay)
 EXT@important:1Sp-(2H)-Pass-(Pass)-3m: (15)16+ HCP and (4)5+ suit (Syl)
-EXT@important:1H-(4Sp)-4NT and 1Sp-(4H)-4NT is RKCB
+EXT@important:1H-(4Sp)-4NT and 1Sp-(4H)-4NT is RKCB (Honti)
+EXT@critical:1H-2Cl-2Sp-4H-4NT is CB 1st or 2nd round control in Sp (SzCsabi)
 

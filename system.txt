@@ -179,16 +179,18 @@ Mini Multi 2D opening
 Weak 2X opening
 2X*
 
-2M-2Y@normal:STR, stopper
-2M-2N@normal:WK, 3M
-2M-3X@normal:WK, 0-1M
-2M-3M@normal:WK, 2= support
-2M-4M@normal:STR, 3M
-2N-3C@normal:STR/GS or WK/BS if M or simply STR if D
-2N-3D@normal:WK/GS if M or simply WK if D
-2N-3M@normal:STR/BS
+2H-2Sp@normal:STR (2D opener), NAT GF bids over this, 3D is F1 as well
+2H-3C@normal:NAT, 4+Cl, no zone yet, 3D is NF
+2H-3D@normal:WK (2D openers bid)
+2H-3M@normal:STR with good 6D and weak 4M. This type of hand may only happen if 2D was V opening or overcall.
+2S-2N@normal:WK, 3+Sp, this bid is what 3Sp would be in a standard system
+2S-3X@normal:Weak, usually singleton in Sp
+2S-3Y@normal:STR, NAT, as the 2X opener is not normally 5332 or 4Sp5X22 opener can bid his 4 card suit
+2S-3S@normal:WK, 2= support, NF
+2N@normal:If 2X=2D this is 5+H and F1, otherwise this GI+ R and asking and responses are 3Cl: WK/BS, 3D: WK/GS, 3H: STR/BS, 3Sp: STR/GS. If 2M was NV opening BS means 5 card suit, and GS means six card suit. If 2M was V opening (or overcall) GS is six card and contains exactly two top honors (with AKQxxx bid 3NT).
 3m@normal:TP
 4M@normal:TP
+EXT@normal:Few tips to remember the 2M-2NT responses: 3D is always GS, this way the opponents have less opportunity to double for D lead against 3NT as GS suggest a 4M for game. The mathematicians way is to take the two variables (strength and suit), and alternate the bids accordingly to the binary system (00, 01, 10, 11).
 
 #Entry for situation: 9
 Weak two suiter 2M opening
@@ -207,13 +209,17 @@ Weak two suiter 2M opening
 3C-3D@normal:Negative, 3H over this is asking Sp count (3Sp=2, 3NT=3, 4X=4), 3Sp: F3NT, 3NT: 5H4Sp Smolen
 3C-3H@normal:4+H, 3Sp over this is asking H count (3NT=4, 4X=5), 3NT: TP
 3C-3S@normal:3Sp shows 5 card spade holding, 3NT is TP
+3C-3X-4Cl@important:Minor Stayman, D=Cl, H=D over which R1 is RKC, 4NT is NO FIT, other bids are Exclusion; 4Sp is either both(over 3D) or neither (over 3M), and 4NT is NO FIT over neither, while 4NT = SLI RKC Cl and 5Cl = SLI RKC D over both, which means 5m bid is not RKC response but no accept.
+3C-3X-4D@important:F4H, over which 4Sp: SLI+ 5D, 4NT: NF SLI 5Cl, 5Cl: SLF 5Cl
 3C-3N-4D/4H@normal:Transfer as 3N is 4-4 major
-3D/3H-4m@normal:NAT
-3D/3H-4H@normal:55GF
-3D/3H-4M@normal:SLI
-4C@normal:SLI 6+Cl
+3C-3N-4C/4S@normal:5 card Cl/D SLI, 2NT opener gives RKC response with out 4NT or 5m steps
+3M Over 3D/3H-4m@normal:NAT, 4M is WK, 4M+1 is RKC in M, 5m is TP, other bids (including 4NT with H trump) are RKC responses and accepts m as trump
+3M Over 3D/3H-4H@normal:55GF
+3M Over 3D/3H-4M@normal:SLI
+3S@important:55 or 64 in the minor suit
+4C@normal:SLI 6+Cl, 4NT/5Cl are TP, other bids are RKC responses
 4D/4H@normal:GF or SF with 6+ H/Sp
-4Sp@normal:SLI 6+D
+4Sp@normal:SLI 6+D, 4NT/5D are TP, other bids are RKC responses
 5m@normal:TP
 
 #Entry for situation: 11

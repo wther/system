@@ -191,7 +191,7 @@ EXT@normal:There are generally two ways to bid a splinter. Therefore the one ove
 1M*
 
 1S-1N@important:11-14HCP(A), singleton Sp possible, See TWCHBK above.
-1S-2C@important:(3)4+Cl 11-15HCP(A), or any (17)18+HCP(C). 2D is always (7)8+, other bids are 2H/2S WK NF or 2NT/3Cl WK TRF
+1S-2C@critical:(3)4+Cl 11-15HCP(A), or any (17)18+HCP(C). 2D is always (7)8+, other bids are 2H/2S WK NF or 2NT/3Cl WK TRF, 1H-1S-2C-3H is NAT INV with good (4)5+Sp
 1S-2D@normal:4+D 11-17HCP(A-B)
 1S-2S@important:11-15HCP(A), 3-4Sp, 3H is GF, 4+Sp over which 3Sp UBAL 3crd, 3NT BAL 3crd <br/> 2NT is NF INV over which 3m: WK 35(41) with 4m, 3H: 36(31), 3Sp: 4Sp WK, 3NT/4Sp: TP
 1S-2N@normal:16-17HCP(B), QBAL or 1534/3514, Wolff to continue
@@ -250,9 +250,13 @@ Gazzilli
 
 1H-1S-2C-2D-2H@normal:11-15HCP(A), bids from 2D responders are NAT INV
 1H-1S-2C-2D-2S@normal:(17)18+HCP(C), 3+Sp, it's best if 2D opener bids 2NT if he has only 4Sp, and opener can bid his distribution; 35(32), 35(41), 3622, 36(31)
-1H-1S-2C-2D-2N@important:ART, 4=m sidesuit, F3Cl, over 3Cl 3D: 4=Cl, 3H: 6H4D, 3NT: 5H4D3Cl
+1H-1S-2C-2D-2N@critical:ART, 4=m sidesuit, bid this with 6H4m, but bid 3m with 6H5m or 5H5m
+1H-1S-2C-2D-2N-3C@important:asking, responses are 3D is 4=Cl, 3H is 6H4D, 3NT is 5H4D3Cl
+1H-1S-2C-2D-2N-3D@important:5Sp5D SLI, ORKC and NAT NF responses over this, 4NT is RKCB Sp
+1H-1S-2C-2D-2N-3H/4m@important:3H is BAL SLI with 5Sp and 3H, 4m is SPL SLI with 5Sp and 3H that was originally a GF hand
+1H-1S-2C-2D-2N-3S@important:NAT 6+Sp 6133/62(32)/..., 3NT/4H over this is NAT, 4m is CB with 2= Sp support
 1H-1S-2C-2D-3H@normal:6+H GF, 26(32), 1633
-1H-1S-2C-2D-3N@normal:2533 18-19HCP
+1H-1S-2C-2D-3N@critical:2533 (17)18(19)HCP, 4m is CB with 3H SLI, 4Sp is NAT NF, 4NT is RKCB Sp
 1H-1N-2C-2D-2H@normal:11-15CP(A), bids from 2D responder are NAT INV
 1H-1N-2C-2D-2S@normal:(17)18+HCP(C) GF, 4Sp, 45(13), 4522, 46(12), 46(30), 4711, 47(20)
 1H-1N-2C-2D-2N@important:ART 4=m, F3Cl responses are 3D: 4Cl, 3H: 6H4D, 3NT: 1543/2542
@@ -260,7 +264,8 @@ Gazzilli
 1H-1N-2C-2D-3N@normal:35(32)/2533 18-19 HCP
 1S-1N-2C-2D-2H@normal:(17)18+HCP(C) GF, 4=H!, 54(13), 5422, 64(21), 46(30), 7411, 74(20)
 1S-1N-2C-2D-2S@normal:11-15HCP(A), same philosophy as above
-1S-1N-2C-2D-2N@important:ART 4=m, F3Cl over which bids are 3D: 4Cl, 3H: 5341 5Sp4D3H, 3Sp: 6Sp4D, 3NT: 1543 5143/4242
+1S-1N-2C-2D-2N-3C@critical:asking, responses are 3D: 4=Cl, 3H: 5341, 3Sp: 6Sp4D, 3NT: 5143
+1S-1N-2C-2D-2N-3H@critical:NAT 6+H, 1633/26(32)/..., 3Sp/3NT over this is NAT, 4m is CB with 2-3H, 4H is WK
 1S-1N-2C-2D-3m/3H@normal:55 GF, it's important to mention that 5-3 Sp fit is no longer possible
 1S-1N-2C-2D-3S@normal:6+GF, 6(322), 6(331)
 1S-1N-2C-2D-3N@normal:QBAL 5(332)/5M4m22, 18-19HCP
@@ -389,7 +394,12 @@ EXT@normal:Over 2M-(Dbl), Pass is TP, Rdbl shows a suit and asks 2M opener to bi
 2NT opening
 2N*
 
-3C-3D@normal:Negative, 3H over this is asking Sp count (3Sp=2, 3NT=3, 4X=4), 3Sp: F3NT, 3NT: 5H4Sp Smolen, after 3H Sp count asking 4H we'll always be TRF from responder
+3C-3D-3H@normal:asking Sp count (3Sp=2, 3NT=3, 4C/4D = STR CB with 4Sp, 4Sp is WK 4Sp), 4H over any response is TRF to 4Sp
+3C-3D-3S@normal:F3NT, SLI/SLF with 64M or SLI+/SLF with 5H4Sp (as 3NT is NF), or S/O in 3NT
+3C-3D-3S-3N-4C@critical:5H4Sp SLI+/SLF, responses are 4D: WK/NOFIT, 4H is NAT 3H, 4Sp is NAT 4Sp, 4NT is STR/NOFIT over which responder gives RKC responses
+3C-3D-3S-3N-4D@critical:SLI/SLF with 6H4Sp, responses are 4H: WK, 4Sp: STR 4Sp F1, 4NT/5Cl/5D/5H is RKCB response with H as trumps
+3C-3D-3S-3N-4H@important:SLI/SLF with 6Sp4H, responses are 4Sp: NAT WK, 4NT/5Cl/5D/5H is RKCB response with Sp as trumps
+3C-3D-3N@normal:5H4Sp Smolen GF or SLI- (would play 3NT if no fit is found)
 3C-3H@normal:4+H, 3Sp over this is asking H count (3NT=4, 4X=5), 3NT: TP
 3C-3S@normal:3Sp shows 5 card spade holding, 3NT is TP
 3C-3M-4C@important:Minor Stayman, also 4Cl is Minor Stayman and 4D is F4H 5m SLI if searching for M fit failed, i.e. 2NT-3Cl-3D-3H/3NT-4Cl/4D or 2NT-3Cl-3H-3Sp-3NT-4Cl/4D
@@ -399,10 +409,10 @@ EXT@normal:Over 2M-(Dbl), Pass is TP, Rdbl shows a suit and asks 2M opener to bi
 3C-3X-4D@important:F4H, over which 4Sp: SLI+ 5D, 4NT: NF SLI 5Cl, 5Cl: SLF 5Cl. Over 4Sp 4NT/5D is NF other bids are RKC responses.
 3C-3N-4D/4H@normal:Transfer as 3N is 4-4 major
 3C-3N-4C/4S@normal:5 card Cl/D SLI, 2NT opener gives RKC response with out 4NT or 5m steps
-3M Over 3D/3H-3S@normal:55 SLI, over this 4Cl/4D accepts in H/Sp, R1 is RKC
-3M Over 3D/3H-4m@important:NAT, 4M is TP, 4NT is NF NOFIT, R1 is RKC in m, other bids (including 5m) are RKC responses and accepts M as trump
-3M Over 3D/3H-4H@normal:55GF
-3M Over 3D/3H-4M@normal:SLI
+3D/3H-3M-3S@normal:55 SLI, over this 4Cl/4D accepts in H/Sp, R1 is RKC
+3D/3H-3M-4m@important:NAT, 4M is TP, 4NT is NF NOFIT, R1 is RKC in m, other bids (including 5m) are RKC responses and accepts M as trump
+3D/3H-3M-4H@normal:55GF
+3D/3H-3M-4M@normal:SLI
 3S@important:55 or 64 in the minor suits, 3NT: TP, 4m: accepts if 3S bidder has SLI over which 5m is NF other bids are RKC responses, 5m is TP
 4C@normal:SLI 6+Cl, 4NT/5Cl are TP, other bids are RKC responses
 4D/4H@normal:GF or SF with 6+ H/Sp
@@ -430,8 +440,8 @@ EXT@normal:Convention against both strong and weak NT opening: Multi Landy.
 EXT@normal:Against precision 1Cl opening: Dbl strong, usually one suiter, 1D: majors, 1NT/2NT/3NT: minors, otherwise natural. Over 1Cl-1D: Dbl majors, NT: minors, other bids are natural including 2D. Against STR 2Cl opening 2D: majors, 2NT/3NT: minors, other bids are natural. Against STR 2D opening 2D: majors, 2NT/3NT minors, other bids are natural. Against NAT 2NT opening all bids are natural, 3NT is minors.
 EXT@critical:Against 2NT WK minors and 3NT Gambling, 3/4Cl is majors with better H, 3/4D is majors with better Sp, Dbl is STR, Dbl after Dbl is PEN.
 EXT@critical:Any Rdbl from passed hand shows maximum passed hand if otherwise non-conventional.
-EXT@critical:Over (1m)-2m-(Pass)-???: 2D is pick-a-major F1, 3m is 33+M INV, 2NT is GI+ R, over which 3m is 5M STR SPL, 3H is WK 55, 3Sp is 6H5Sp, 3NT is 6Sp5H
-EXT@critical:Over (1M)-2M-(Pass)-???: 3Cl is pick-a-minor, 3D is INV 3+oM, 2NT is GI+ over which 3m is WK 55, 3H/Sp is STR 55 with H=Cl and Sp=D
+EXT@critical:Over (1m)-2m-(Pass)-???: 2D is pick-a-major F1, 3m is 33+M INV, 2NT is GI+ R, over which 3m is 55M STR SPL, 3H is WK 55, 3Sp is 6H5Sp, 3NT is 6Sp5H
+EXT@critical:Over (1M)-2M-(Pass)-???: 3Cl is pick-a-minor, 3D is INV 3+oM, 2NT is GI+ over which 3m is WK 55+, 3H/Sp is STR 55+ with H=Cl and Sp=D
 
 #Entry for situation: 19
 Defense

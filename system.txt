@@ -57,7 +57,6 @@ EXT@important:NV 2D/2M openings are QTxxx or better, with discouraged 3oM in 2M.
 1M-2N@normal:18-19 QBAL, Wolff
 1N-2C@normal:14-17, 4+Cl, 2D shows weak hand
 1N-2x@normal:Reverse bid, may only be good 16 HCP in this situation
-2C-2D@important:5+D, always bid 2D with 5+D holding, F1, over this 2M is not yet GF and 2NT/3D is NF
 2C-2M@normal:STP, offers for partner to be declarer in NT, 3C/3D bid is GF
 2C-2N@normal:WK, STP in both majors, NF, 3C/3D bid is GF
 2C-3C@normal:4+ Cl, doesn't deny major stoppers, GF
@@ -72,7 +71,7 @@ EXT@important:NV 2D/2M openings are QTxxx or better, with discouraged 3oM in 2M.
 
 #Entry for situation: 4
 Two way checkback
-1m--1N*
+*
 
 1C-1D-1N-2D over 2C-2M@normal:4Cl, short oM, INV
 1C-1D-1N-2D over 2C-2N@normal:5Cl GI, this hand can only occur if 1N shows 14-17HCP
@@ -83,19 +82,9 @@ Two way checkback
 1C-1D-1N-2D-3C@normal:5=Cl, (23)35/3325
 1C-1D-1N-2D-3D@normal:4=D, 2245/23(44)
 1C-1D-1N-2D-3N@normal:3316
-1m-1M-1N-2D over 2C-2M@important:INV 5M, 2NT is TP over this
-1m-1M-1N-2D over 2C-2H@normal:INV 5H5Sp (bid 2NT for "pick a minor")
-1m-1M-1N-2D over 2C-2S@normal:INV 5H4Sp (bid 2NT for "pick a minor")
-1m-1M-1N-2D over 2C-2N@normal:INV 5M with m tolerance
-1m-1M-1N-2D over 2C-3C/3D@normal:NAT INV, 3C promises only 4M, while 3D 5M
-1m-1M-1N-2D over 2C-3H@normal:INV 6Sp5H, 3Sp is TP
-1m-1M-1N-2D over 2C-3M@normal:INV 6M, not NT shaped hand
-1m-1M-1N-2D over 2C-3S/4X@normal:SPL with void
-1m-1M-1N-2D over 2C-3N@normal:5M332 offers a choice
 1m-1M-1N-2D-2oM@important:4oM, this has preference over 2M, 2NT is asking H count over 2Sp (3,2,1 responses), while 1m-1Sp-1NT-2D-2H-2Sp-3H shows singleton Sp
 1m-1M-1N-2D-2M@normal:3M, no 4 oM and not 4333
 1m-1M-1N-2D-2N@normal:4333, any other bid denies this distrubition, even 4oM333 is 2NT bid,  3m is NAT over which 3Sp/3NT is 4Sp333/4m333, 3om is 5om/5M GF, 3M is 5-6M SLI, 3Sp is NAT 4Sp
-1m-1M-1N-2D-3om@normal:44/54 minors, no singleton
 1m-1M-1N-2D-3m@normal:Anything that doesn't fit, which is 5m332 with doubleton M
 1m-1M-1N-2D-3M@normal:4M333
 1m-1M-1N-2D-3oM@normal:5m-4om-3oM-1M distribution
@@ -117,13 +106,11 @@ EXT@normal:There are generally two ways to bid a splinter. Therefore the one ove
 1S-1N@important:11-14HCP(A), singleton Sp possible, See TWCHBK above.
 1S-2C@important:(3)4+Cl 11-15HCP(A), or any (17)18+HCP(C). 2D is always (7)8+, other bids are 2H/2S WK NF or 2NT/3Cl WK TRF
 1S-2D@normal:4+D 11-17HCP(A-B)
-1S-2H@normal:6+H, 11-15HCP(A)
 1S-2S@important:11-15HCP(A), 3-4Sp, 3H is GF, 4+Sp over which 3Sp UBAL 3crd, 3NT BAL 3crd <br/> 2NT is NF INV over which 3m: WK 35(41) with 4m, 3H: 36(31), 3Sp: 4Sp WK, 3NT/4Sp: TP
 1S-2N@normal:16-17HCP(B), QBAL or 1534/3514, Wolff to continue
 1S-3m@normal:5H5m, 15-16HCP(B)
-1S-3H@normal:6+H, 16-17HCP(B)
 1N-2C@important:QBAL/4+Cl 11-15HCP(A), or any (17)18+HCP(C), 2D is always (7)8+, other bids are 2M WK NF or 2NT/3Cl is WK TRF
-1N-2D@normal:(3)4+D 11-17HCP(A-B), 1H-1NT-2D might be with 4531
+1N-2D@normal:(3)4+D 11-17HCP(A-B), 1H-1NT-2D might be with 4531, and 1S-1N-2D may be 5134 with 16-17HCP
 1N-2H@normal:4+H,11-17HCP(A-B)
 1N-2M@normal:6+M, 11-15HCP(A)
 1N-2S@important:16-17HCP(B), 4=Cl 1534/4504/3514/2614/1624 bidding 2NT/3Cl is S/O
@@ -138,7 +125,7 @@ EXT@normal:There are generally two ways to bid a splinter. Therefore the one ove
 2M-2M+2@important:Long suit(in Sp if M=H) or power trial, responses are Power accept/Long suit accept/3M=Neither/Both.
 2S@normal:6+Sp, INV, 3H over 2Sp is GF 6+
 2N-3C@normal:Minimum hand, responses are the same from 2NT bidder except 3M may be weak after H opening, as 4H shows void in Sp <br/> Note: Minimum hand means no void
-2N-3/4x@normal:Extra strength, shortness, NT=Cl, double jump shows void
+2N-3X/4X@normal:Extra strength, shortness, NT=Cl, double jump shows void
 2N-3M@normal:Extra strength with out singleton or void
 3C@important:WK Bergen, 3D is INV over 3C
 3D@important:STR Bergen, 3oM is asking for short suit, response are 3NT=no short suit, 4M=short Sp at hearts, weak and none at Sp
@@ -154,19 +141,16 @@ EXT@important:1H-1NT-2NT may be 4513, but this should be avoided. This hand is p
 
 #Entry for situation: 6
 Gazzilli
-1M-1X-?*
+*
 
 1H-1S-2C-2D-2H@normal:11-15HCP(A), bids from 2D responders are NAT INV, except 3D is GF (and therefore promises 5 card Sp).
 1H-1S-2C-2D-2S@normal:(17)18+HCP(C), 3+Sp, it's best if 2D opener bids 2NT if he has only 4Sp, and opener can bid his distribution; 35(32), 35(41), 3622, 36(31)
 1H-1S-2C-2D-2N@important:ART, 4=m sidesuit, F3Cl, over 3Cl 3D: 4=Cl, 3H: 6H4D, 3NT: 5H4D3Cl
-1H-1S-2C-2D-3m@normal:55+ GF, NAT continuation
 1H-1S-2C-2D-3H@normal:6+H GF, 26(32), 1633
 1H-1S-2C-2D-3N@normal:2533 18-19HCP
-1H-1S-2C-2D-4m@normal:4Sp void SPL
 1H-1N-2C-2D-2H@normal:11-15CP(A), bids from 2D responder are NAT INV
 1H-1N-2C-2D-2S@normal:(17)18+HCP(C) GF, 4Sp, 45(13), 4522, 46(12), 46(30), 4711, 47(20)
 1H-1N-2C-2D-2N@important:ART 4=m, F3Cl responses are 3D: 4Cl, 3H: 6H4D, 3NT: 5H4D3Cl
-1H-1N-2C-2D-3m@normal:55 GF, bid this with any 65
 1H-1N-2C-2D-3H@normal:6+GF, 26(32), 1633, 3622
 1H-1N-2C-2D-3N@normal:35(32)/2533 18-19 HCP
 1S-1N-2C-2D-2H@normal:(17)18+HCP(C) GF, 4=H!, 54(13), 5422, 64(21), 46(30), 7411, 74(20)
@@ -261,23 +245,4 @@ Weak two suiter 2M opening
 5m@normal:TP
 EXT@normal:Puppet alters the behavior of the Minor Stayman.  After 2NT-3Cl-3D the 4Sp/4NT response may be present as 4 card bid is not necessarily bid. In case of 2NT-3Cl-3D-3H-3Sp which shows maximum 5 cards in the majors, the 4+m minor response is always 5m332.
 EXT@important:After 4NT NOFIT or 4NT no 4 card minor of minor stayman, 5NT is SLI to 6NT with 10-11HCP.
-
-#Entry for situation: 12
-Extensions
-*
-
-EXT@normal:Over 2Cl opening: 2D 2-3C, 2H 0-1C, 2Sp 4+, 2NT: 3K, no Kokish over 2D
-EXT@normal:2Cl-2x-3Sp is always NAT, 2Cl-2H-3NT is TP
-EXT@normal:3Cl-4D is RKCB and 3X-4Cl is ORKC in X
-EXT@important:Spiral continuation after RKCB/ORKC. Opponents suit goes last (even only 1m opener), responders shortness is not a step. Default order is Sp-H-D-Cl. Spiral steps are: asking the queen, asking from the first king, from the last king, from the second queen, and the jacks including the trump jack. The next relay over a response if always asking for the next unknown card. In case the questioner steps over 1 or 2 relay, the responder should skip 1 or 2 unknown cards in the sequence. Skipping more then 3 steps ends the spiral sequence and is sign off or other natural bid.
-EXT@normal:In other words, after the first spiral ask the questioning queue for both players will not change. The bids skipped by the responder show held cards, the  bids skipped by the questioner show cards he's not interested in. First relay over is always denying/asking the next cards in the queue.
-EXT@normal:Penalty doubles after CS double. Any CS double forces the auction to 2NT or doubled contract.
-EXT@normal:Supportive double/redoubles up to 3Sp with strength accordingly
-EXT@normal:Exclusion, Serious, PODI, PORI, PEDO, but no PNS-ROBI
-EXT@normal:Multi against multi 2D opening (Double shows major)
-EXT@important:If Stayman, 2Cl of TWCHBK or 2Cl of Gazzilli gets double: redouble offers to play 2Clxx, pass shows stopper or wants 2Clxx, bidding denies stopper. Pass has to be reopened with redouble unless Stayman is JUNK, 2Cl was S/O in D.
-EXT@important:In other situation when an artificial bid (e.g. searching for stopper) gets double, pass is stopper with A or K, redouble is no stopper, NT bid is stopper without A/K (QTxx or better). After pass showing A/K stopper other player should redouble to transfer the contract if holds no stopper. Non-NT bids show singleton in doubled suit.
-EXT@important:If 1NT is overcalled with artificial bid, double is CS, forcing up to 2NT and all doubles from both party are penalty. Still Rubensohl situation from responder.
-EXT@normal:Rubensohl situations are: 1m-(2M)-???, 1Cl-(2D)-???, 1H-(2Sp)-???, 1NT-(2X)-???, 1NT-(2X)-CS Dbl-(2Y)-Pass-(Pass)-???, (1NT)-Dbl-(2X)-???.
-EXT@important:Good bad situations are the same as Mouse situations, additionally when responder bids forcing 1NT. So when opener is on the one level and responder bids/doubles on the one level, and opponents bid on the two level in front of the opener. In Good-bad situations any bid, on the three level is NF and all invitational bids are through artificial 2NT
 

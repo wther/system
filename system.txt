@@ -131,7 +131,7 @@ EXT@normal:There are generally two ways to bid a splinter. Therefore the one ove
 1N-3m/3H@normal:55 distribution, 15-16HCP(B)
 1N-3M@normal:6+M, 16-17HCP(B)
 1N-3N@normal:Gambling, 16-17HCP(B), solid 6(7)M
-2C@important:INV 3M or GF 2+, only 2D is ART WK, 2NT is QBAL 14-16HCP, 2Sp/3Cl/3D shows extra strength, any jump shows fit+shortness except 3D
+2C@important:INV 3M or GF 2+, only 2D is ART WK, 2NT is QBAL 14-16HCP, 2Sp/3Cl/3D shows extra strength, any jump shows fit+shortness except 3D which shows 5M-5D
 2D@normal:GF 5+, 2NT is 14-16HCP QBAL, 3NT is 17-18HCP 5M332, 2Sp/3Cl/3D shows extra strength, any jump shows fit+shortness
 2H@normal:GF 5+, 2NT is 14-16HCP QBAL, 3NT is 17-18HCP 5233,  3Cl/3D/3H shows extra strength, any jump shows fit+shortness
 2M-2M+1@important:Short suit game try, R asks bid of the short suit is direct (1Sp-2Sp-2NT-3Cl-3Sp is short Cl).
@@ -240,26 +240,27 @@ Weak two suiter 2M opening
 2NT opening
 2N*
 
-3C-3D@normal:Negative, 3H over this is asking Sp count (3Sp=2, 3NT=3, 4X=4), 3Sp: F3NT, 3NT: 5H4Sp Smolen
+3C-3D@normal:Negative, 3H over this is asking Sp count (3Sp=2, 3NT=3, 4X=4), 3Sp: F3NT, 3NT: 5H4Sp Smolen, after 3H Sp count asking 4H we'll always be TRF from responder
 3C-3H@normal:4+H, 3Sp over this is asking H count (3NT=4, 4X=5), 3NT: TP
 3C-3S@normal:3Sp shows 5 card spade holding, 3NT is TP
 3C-3M-4C@important:Minor Stayman, also 4Cl is Minor Stayman and 4D is F4H 5m SLI if searching for M fit failed, i.e. 2NT-3Cl-3D-3H/3NT-4Cl/4D or 2NT-3Cl-3H-3Sp-3NT-4Cl/4D
 3C-3X-4C-4D/4H@important:4+m where D=Cl, H=D over which R1 is RKC, 4NT is NO FIT, other bids are Exclusion
 3C-3X-4C-4S@important:Both 4 card minor. Over this 4NT: SLI RKC Cl and 5Cl: SLI RKC D where 2NT opener bids 5m if doesn't accept
 3C-3X-4C-4N@critical:No 4 card minor.
-3C-3X-4D@important:F4H, over which 4Sp: SLI+ 5D, 4NT: NF SLI 5Cl, 5Cl: SLF 5Cl
+3C-3X-4D@important:F4H, over which 4Sp: SLI+ 5D, 4NT: NF SLI 5Cl, 5Cl: SLF 5Cl. Over 4Sp 4NT/5D is NF other bids are RKC responses.
 3C-3N-4D/4H@normal:Transfer as 3N is 4-4 major
 3C-3N-4C/4S@normal:5 card Cl/D SLI, 2NT opener gives RKC response with out 4NT or 5m steps
-3M Over 3D/3H-3S@normal:55 SLI
-3M Over 3D/3H-4m@important:NAT, 4M is WK, 4M+1 is RKC in M, 5m is TP, other bids (including 4NT with H trump) are RKC responses and accepts m as trump
+3M Over 3D/3H-3S@normal:55 SLI, over this 4Cl/4D accepts in H/Sp, R1 is RKC
+3M Over 3D/3H-4m@important:NAT, 4M is TP, 4NT is NF NOFIT, R1 is RKC in m, other bids (including 5m) are RKC responses and accepts M as trump
 3M Over 3D/3H-4H@normal:55GF
 3M Over 3D/3H-4M@normal:SLI
-3S@important:55 or 64 in the minor suits
+3S@important:55 or 64 in the minor suits, 3NT: TP, 4m: accepts if 3S bidder has SLI over which 5m is NF other bids are RKC responses, 5m is TP
 4C@normal:SLI 6+Cl, 4NT/5Cl are TP, other bids are RKC responses
 4D/4H@normal:GF or SF with 6+ H/Sp
 4S@normal:SLI 6+D, 4NT/5D are TP, other bids are RKC responses
 5m@normal:TP
 EXT@normal:Puppet alters the behavior of the Minor Stayman.  After 2NT-3Cl-3D the 4Sp/4NT response may be present as 4 card bid is not necessarily bid. In case of 2NT-3Cl-3D-3H-3Sp which shows maximum 5 cards in the majors, the 4+m minor response is always 5m332.
+EXT@important:After 4NT NOFIT or 4NT no 4 card minor of minor stayman, 5NT is SLI to 6NT with 10-11HCP.
 
 #Entry for situation: 12
 Extensions

@@ -60,9 +60,9 @@ EXT@important:NV 2D/2M openings are QTxxx or better, with discouraged 3oM in 2M.
 2C-2D@important:5+D, always bid 2D with 5+D holding, F1, over this 2M is not yet GF and 2NT/3D is NF
 2C-2M@normal:STP, offers for partner to be declarer in NT, 3C/3D bid is GF
 2C-2N@normal:WK, STP in both majors, NF, 3C/3D bid is GF
-2C-3C@normal:4+ Cl, doesn\\\\\\\\\\\\\\\'t deny major stoppers, GF
+2C-3C@normal:4+ Cl, doesn't deny major stoppers, GF
 2m-2D@important:54 WK
-2m-2M@normal:STP, doesn\\\\\\\\\\\\\\\'t show GF values yet, may pass 2NT/3m from responder
+2m-2M@normal:STP, doesn't show GF values yet, may pass 2NT/3m from responder
 2m-2N@normal:WK, STP in both majors, NF
 2m-3m@normal:WK, no stoppers, NF
 2C/2m-3M@normal:Extra strength (14)15+HCP, SPL, 4m over this is ORKC

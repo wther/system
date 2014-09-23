@@ -6,16 +6,14 @@ Opening bids
 1D@normal:(3)4+D, (11)12+HCP, open 1D if 44 or 55 in minors, N5CM
 1H@normal:5+H, (11)12+HCP, 4-Sp
 1S@normal:5+Sp, (11)12+HCP, longer heart holding possible
-1N@critical:(14)15-17FP, QBAL
+1N@important:(14)15-17FP, QBAL
 2C@normal:(22)23+ BAL, can double or bid over anything (absolute force)
-2D@important:V1-2 Mini Multi otherwise NAT WK
-2H@important:V1-2: WK 5H+5m or 5Sp-5H other positions NAT WK
-2S@important:V1-2: WK 5Sp+5m otherwise NAT WK
+2D/2H/2S@critical: NAT WK
 2N@normal:20-21(22) HCP, QBAL, recommended with 5M332
 3X@normal:6+, PRE, Rule of 2/3/4
 3N@normal:Gambling, solid 7(8) in a minor, K outside possible only if minor is 7 cards
 EXT@normal:1M is always an alternative for 1NT opening, 5M332 is not forced.
-EXT@important:NV 2D/2M openings are QTxxx or better, with discouraged 3oM in 2M. V 2D/3m opening promises 2 of the top 3 honors in the suit. No outside A is allowed in 2X/3X/4X preemptive openings.
+EXT@important: NV 2D/2M openings are QTxxx or better, with discouraged 3oM in 2M. V 2D/3m opening promises 2 of the top 3 honors in the suit.
 
 #Entry for situation: 2
 1m opening
@@ -97,16 +95,16 @@ EXT@normal:Basically TWCHBK over 1Cl-1D-1NT. Over 2Cl is either 5D4Cl INV or som
 1M-1S-2S@normal:3+ FIT, WK, but discouraged with 3 cards and QBAL hands
 1M-1S-2S-2N/3m/3om@normal:NAT NF INV
 1M-1S-2S-3S@important:GF 4+Sp, over this 3NT is 3 card, 4m/4om is SPL, 4H is STR BAL, 4Sp is total minimum.
-1M-1N@critical:12-14HCP. May contain singleton M and even 4M333. Always TWCHBK over 1NT response.
+1M-1N@important:12-14HCP. May contain singleton M and even 4M333. Always TWCHBK over 1NT response.
 1M-2C@normal:2oM is 4th suit GI+, 2M is (5)6+ card suit WK
 1M-2m@normal:WK, generally 6+, 1Cl-1Sp-2Cl may be 5 card, Lebel over 2m
 1M-2D@normal:Reverse, 2oM/2M F1, 2NT/3m GF; 2NT/3Cl rebid or 2M-3M by opener is NF
 1M-2H@normal:Reverse, 2Sp/2NT F1, 2NT/3m GF; 2NT/3m rebid or 2Sp-3Sp by opener is NF
 1M-2M@important:2Sp over 2H and 3H over 2Sp is GF asking, 2NT is always NF INV with NAT responses (3M: BAL 4 card), 3NT is TP and should be passed with 4 card support if hand fits NT contract
-1M-2N@critical:18-19 QBAL, 2+M, Wolff (direct bids promise more unbalanced hands)
+1M-2N@important:18-19 QBAL, 2+M, Wolff (direct bids promise more unbalanced hands)
 1M-2N-3C!-3D!-3N@important:SLI 4M4Cl, over which 4m is ORKC
 1M-2N-3C!-3D!-4C!@important:SLI 4M5Cl, over which 4NT/5m is TP other bids are RKC responses in Cl
-1M-2N-3D@critical:If m=Cl: 5+D and 4-5M, GF (over which: 3M:3card M (priority), 3oM:4oM, 3NT:rest), if m=D: 4+D, fit, GF
+1M-2N-3D@important:NAT, GF, exactly 4M
 1M-2N-4m@important:SLI, ORKC
 1M-2N-4om@important:SLI, 5M-5om, over which 4M/4NT is TP, 4om+1 is RKC om, other bids (including 5m) is RKC respone in M
 1H-2H-2S-2N/3om/3N/4om@important:Under 3M 3 card support, over 3M 4 card support. Shortness in the suit (NT=Sp).
@@ -124,11 +122,11 @@ EXT@normal:Basically TWCHBK over 1Cl-1D-1NT. Over 2Cl is either 5D4Cl INV or som
 1N-2N@normal:QBAL, INV, if 1NT shows 6-10HCP this is 16-17HCP, if 1NT shows 8-10HCP this is 15-16HCP
 2C-2D!@important:5+D NAT F1, 2NT/3D over this is NAT NF, 3Cl is GF, 2M is STP, not GF yet
 2C-2M@normal:STP, offers for partner to be declarer in NT, not GF yet, 3C/3D bid is GF
-2C-2N@critical:13-14HCP, STP in both major and wants to declare in NT
+2C-2N@important:13-14HCP, STP in both major and wants to declare in NT
 2C-3C@normal:4+ Cl, doesn't deny major stoppers, GF
 2m-2D@normal:NAT, 4+D F1
 2m-2M@normal:STP, doesn't show GF values yet, may pass 2NT/3m from responder
-2m-2N@critical:13-14HCP, STP in both major and wants to declare in NT
+2m-2N@important:13-14HCP, STP in both major and wants to declare in NT
 2m-3m@normal:WK, no stoppers, NF
 2C/2m-3M@normal:Extra strength (14)15+HCP, SPL, 4m over this is ORKC
 2C/2m-3N@important:18-19BAL, 44(32)/4333
@@ -140,21 +138,24 @@ EXT@normal:Basically TWCHBK over 1Cl-1D-1NT. Over 2Cl is either 5D4Cl INV or som
 2S-2N-3N@normal:5422, with minor honors
 2N-3C!@normal:Stayman, responses are no 4 card/H/Sp/both. Transfers over 3N, as it shows both.
 2N-3x@normal:Singleton in suit (D=om), 3Sp denies 4 card H
+EXT@important:Over 2H:STP in H, 2Sp asks for Sp stopper, partner will bid 2NT/3NT with Sp STP, 2H-2Sp-2NT is not GF yet. (Over 1D-2Cl, 1m-2m, ...)
+EXT@important:1m-1Sp-1NT/2m/2om-3H:5-5 majors, GF.
 
 #Entry for situation: 6
 Lebel and 4th suit
 *
 
 1m-1M-2m-2m+1-2M@normal:2-3M, WK, 2NT/3m is TP other bids are GF, 3M is asking to bid 4M with 3 card support
-1m-1M-2m-2m+1-2H@critical:NAT, WK, 54+
-1m-1M-2m-2m+1-2Y/3Y@normal:Bidding the 4th suit under 3M is STR, and shows stopper, normally looks for stopper in the suit of the R
+1m-1M-2m-2m+1-2H@important:NAT, 5+m4H, no zone (then: 2NT/3m is NF, other bids are GF)
+1m-1M-2m-2m+1-2S/3om(/3H)@important:GF, STR, shows NO stopper (3H when 2H was available)
 1m-1M-2m-2m+1-2N@normal:WK, and stopper in the 4th suit, 3m is TP other bids are NAT GF
 1m-1M-2m-2m+1-3m@normal:WK, nothing to say, any bid is NAT GF if not passed by 1M responder
-1m-1M-2m-2m+1-3H@critical:NAT, GF, 54+
 1m-1M-2m-2m+1-3M@normal:If 2M bid was available this is 3 card M support and STR, otherwise (2)3 card M support and WK
-1m-1M-2m-2m+1-3N@normal:STR, and if both the suit of the R and the 4th suit can be bid as STR and stopper then this shows stopper in both suit, otherwise only in the suit that could not bid as stopper. See example below.
+1m-1M-2m-2m+1-3N@normal:STR, stoppers
 1D-1H-2D-2S-3S@important:Only exception for the rule above, this is 3 card M support and STR
-1D-1H-2D-2S-3N@normal:As not all suits can be bid as stopper (3Sp = H), but Cl could have been bid as STR NAT/STP, this is Sp STP and STR
+1D-1H-2D-2S-3N@important:Cl STP and STR
+1D-1S-2D-2H-3H@important:4H STR, GF
+1D-1S-2D-2H-3N@important:Cl STP and STR
 1C-1D-1H-1S-1N/2N@normal:NAT Sp STP, WK/STR
 1C-1D-1H-1S-2C/2D@normal:NAT WK
 1C-1D-1H-1S-2H@normal:STR, nothing to say
@@ -167,7 +168,10 @@ Lebel and 4th suit
 1m-1D/1M-1X/2C-2Y-3m@normal:If 2X can't be bid, then this is WK, otherwise STR 64
 1m-1D/1M-1X/2C-2Y-3Y@normal:STR, nothing else to say
 1m-1D/1M-1X/2C-2Y-3M@normal:If 2M can be bid, then this is STR 3, otherwise WK (2)3 in M
+1D-1H-2C-2S-3D@important:STR, nothing else to say
 1D-1H-2C-2S-3S@important:STR, 3H
+1D-1S-2C-2H-3D@important:STR, nothing else to say
+1D-1S-2C-2H-3H@important:4H, STR
 1H-1S-2D-3C-3D@normal:no Cl STOP
 1H-1S-2D-3C-3H@important:6H, (15)16-17HCP, may have Cl STOP
 1H-1S-2D-3C-3S@normal:3Sp support, may have Cl STOP
@@ -177,6 +181,12 @@ Lebel and 4th suit
 Two way checkback
 *
 
+1m-1H-1N-2S@normal:44 INV, 2NT: pick a minor
+1m-1M-1N-2D over 2C!-2M@important:5(6)M, INV, NF, 2NT: pick a minor
+1m-1M-1N-2D over 2C!-2N@normal:5M INV, m tolerance, 3m:TP
+1m-1M-1N-2D over 2C!-3C!@normal:NAT, INV, 4M
+1m-1M-1N-2D over 2C!-3D@normal:NAT, INV, 5M
+1m-1M-1N-2D over 2C!-3M@normal:6M INV, not balanced
 1m-1M-1N-2D!-2oM@normal:4oM, this has preference over 2M, 2NT is asking H count over 2Sp (3,2,1 responses), while 1m-1Sp-1NT-2D-2H-2Sp-3H shows singleton Sp
 1m-1M-1N-2D!-2M@normal:3M, no 4 oM and not 4333
 1m-1M-1N-2D!-2N@normal:4333, any other bid denies this distrubition, even 4oM333 is 2NT bid,  3m is NAT over which 3Sp/3NT is 4Sp333/4m333, 3om is 5om/5M GF, 3M is 5-6M SLI, 3Sp is NAT 4Sp
@@ -184,6 +194,7 @@ Two way checkback
 1m-1M-1N-2D!-3M@normal:4M333
 1m-1M-1N-2D!-3oM@normal:5m-4om-3oM-1M distribution
 1m-1M-1N-2D!-3N@normal:6331/6322 with 6m
+1m-1M-1N-3C!@normal:TP
 1H-1S-1N-2D over 2C-2H@normal:5Sp3H INV
 1H-1S-1N-2D over 2C-2S@normal:6Sp3H INV
 1H-1S-1N-2D-2H@important:15(43), 2NT asks for the 4 card minor suit
@@ -191,7 +202,6 @@ Two way checkback
 1H-1S-1N-2D-2N@normal:2533
 1H-1S-1N-2D-3m@normal:5H4m22
 1H-1S-1N-2D-3H@normal:26(32)
-EXT@normal:When bidding major stoppers through a 2M forcing to 2NT, stoppers are bid bottom to up. Thus bidding H and then Sp shows both, while H after Sp neither.
 EXT@normal:There are generally two ways to bid a splinter. Therefore the one over 2Cl-2D shows void, and direct approach is only singleton.
 
 #Entry for situation: 8
@@ -214,28 +224,33 @@ EXT@normal:There are generally two ways to bid a splinter. Therefore the one ove
 1N-3m/3H@normal:55 distribution, 14-16HCP(B), over which 3M is TP, 4m is NAT INV, other bids are GF, 3Cl-4D or 3D-4Cl is SLI in m with big fit, over which 5m is TP other bids are RKC reponses, over 1Sp-1NT-3H 4m is CB SLI with big fit
 1N-3M@normal:6+M, 16-17HCP(B)
 1N-3N@normal:Gambling, 16-17HCP(B), solid 6(7)M
-2C@normal:INV 3M or GF 2+, only 2D is ART WK, 2NT is QBAL 14-16HCP, 2Sp/3Cl/3D shows extra strength, any jump shows fit+shortness except 3D which shows 5M-5D
+2C@normal:INV 3M or GF 2+, only 2D is ART WK (max 13 HCPs), 2NT is QBAL 14-16HCP, 2Sp/3Cl/3D shows extra strength, any jump shows fit+shortness except 3D which shows 5M-5D
 2D@normal:GF 5+, 2NT is 14-16HCP QBAL, 3NT is 17-18HCP 5M332, 2Sp/3Cl/3D shows extra strength, any jump shows fit+shortness
 2H@normal:GF 5+, 2NT is 14-16HCP QBAL, 3NT is 17-18HCP 5233,  3Cl/3D/3H shows extra strength, any jump shows fit+shortness
-2M-2M+1@important:Short suit game try, R asks bid of the short suit is direct (1Sp-2Sp-2NT-3Cl-3Sp is short Cl).
-2M-2M+2@important:Long suit(in Sp if M=H) or power trial, responses are Power accept/Long suit accept/3M=Neither/Over 3M = Both.
+2M-2M+1@critical:GF Relay, either looking for good game (3NT being the alternative) or exploring the possibility of slam.
+2M-2M+1-3X/4X@critical: Good 5/6 cards suit and good hand.
+2M-2M+1-3M/4M@critical: 3M is good hand for slam, 4M is bad hand for a possible slam
+2M-2M+1-3N@critical: NAT, TP. Either 4333 or 4432 with good values for NT game.
+2M-3X@important:NAT, INV, Help needed in this suit.
 2S@normal:6-7Sp, WK, continuation as 2Sp WK opening
 2N-3C@normal:Minimum hand, responses are the same from 2NT bidder except 3M may be weak after H opening, as 4H shows void in Sp <br/> Note: Minimum hand means no void
 2N-3X/4X@normal:Extra strength, shortness, NT=Cl, double jump shows void
 2N-3M@normal:Extra strength with out singleton or void
 3C@normal:WK Bergen, 3D is INV over 3C, 3oM is asking for short suit, responses are same as over 3D
-3D@critical:STR Bergen, 3NT is ORKC (first step accepts), 3oM is asking for short suit, response are 3NT=no short suit, 4M=short Sp at hearts, 3Sp/3NT= STR and none, 4M=WK and none at spades
+3D@critical:STR Bergen, INV only, 3oM is asking for short suit, response are 3NT=no short suit, 4M=short Sp at hearts, 3Sp/3NT= STR and none, 4M=WK and none at spades
 3H@normal:6+H, WK, 6-7H, 3Sp over this is 6+Sp F1
 3M@normal:PRE, 4-5M
 3S/4m/4H@normal:SPL
 3N@normal:4m333, 12-15HCP
-EXT@important:1M opening is always 5+, and when 3Cl and 3D jump Bergens stay the same. Even from passed hand, even in case of 1Sp/1NT overcall or double, etc.
+EXT@normal:1M opening is always 5+, and when 3Cl and 3D jump Bergens stay the same. Even from passed hand, even in case of 1Sp/1NT overcall or double, etc.
 EXT@normal:2Cl bid from passed hand is artificial, and shows 10-11HCP and 3= M. Bids from opener show slam intention and long suit, while bids responder show short suits.
-EXT@important:1H-1NT-2NT may be 4513, but this should be avoided. This hand is potentially misfitted, so even with 16HCP it may be better to bid it as WK.
-EXT@important:1Sp-2X-2Sp-2/3Y-3H is STR 6+Sp while 3Sp is 10-13 HCP 6+Sp. 1H-2X-2H-2/3Y-3H is WK 6+H, and 3Sp is STR.
+EXT@important:1H-1NT-2NT may be 4513, but this should be avoided. This hand is potentially miss fitted, so even with 16HCP it may be better to bid it as WK.
+EXT@normal:1M-2X-2M-3M: 14+ HCP, 3+M support.
+EXT@critical:1Sp-2(X=m)-2Sp-2NT/3X-3H is STR 6+Sp while 3Sp is 10-13(14) HCP 6+Sp. 1H-2X-2H-2NT/3X-3H is WK 6+H, and 3Sp is STR.
 EXT@normal:Note, that 1H-2X-2Sp is still strong, the opener does not show 4 crd spade with weak hand. 1H-2X-2H-2Sp is NAT.
 EXT@important:If 1M-2C gets doubled, bids are system on without Cl STOP, Pass forces to Rdbl except with 3=M INV and Rdbl offers support for 2Clxx. 2Cl responder may choose to bid 2M with 3M INV, or 3M/4M with SLI/GF and short Cl insteed of Rdbl. Over Pass from 1M opener and Rdbl from 2Cl responder all bids are system on with Cl STOP.
-EXT@important:1M-2NT-3C-under 3M: opener shows his singleton (3M=no), 1M-2NT-3C-3M or above: opener shows his cues (serious situation)
+EXT@normal:1M-2NT-3C-under 3M: opener shows his singleton (3M=no), 1M-2NT-3C-3M or above: opener shows his cues (serious situation)
+EXT@critical: JLall convention after 1M-1NT-2D/2H/2M-2NT. After this 3Cl is forcing to 3D and either weak hand or GF and concerned about D holding (3NT rebid). Direct suit bids over 2NT are GF are forcing. 
 
 #Entry for situation: 9
 1M competition
@@ -245,7 +260,7 @@ EXT@important:1M-2NT-3C-under 3M: opener shows his singleton (3M=no), 1M-2NT-3C-
 1M-(Dbl)-Rdbl@important:GI+, penalty intensions or 4+M and GF (will bid CB afterwards)
 1M-(Dbl)-1S@normal:NAT, 4+Sp
 1M-(Dbl)-1N/2C/2D@important:Transfer, can be stronger, possibly 3M as well
-1M-(Dbl)-2M-1@normal:3=M, (7)8-10HCP, from passed hand this is Drury, 3M INV
+1M-(Dbl)-2M−1@normal:3=M, (7)8-10HCP, from passed hand this is Drury, 3M INV
 1M-(Dbl)-2M@normal:3=M, WK, in favourable vulnerability may be very weak
 1M-(Dbl)-2S@normal:WK, 6+Sp
 1M-(Dbl)-2N@important:3=M, INV+
@@ -253,6 +268,7 @@ EXT@important:1M-2NT-3C-under 3M: opener shows his singleton (3M=no), 1M-2NT-3C-
 1M-(Dbl)-3N@normal:NAT, TP, 12-15HCP, but not necesserily 4m333
 1M-(Dbl)-3S/4m/4H@normal:SPL
 EXT@important:Over 1M-(Dbl) from passed hand system is on, so 2M-1 is (7)8-10HCP, and with the good Drury hand bid 2NT showing 3=M, INV
+EXT@normal:1M-(1NT):Cappelletti
 
 #Entry for situation: 10
 Gazzilli
@@ -310,29 +326,48 @@ EXT@normal:After a Gazzilli 2Cl, if opener doesn't pass a NF bid or doesn't acce
 1NT Opening
 1N*
 
-2C-Over 2D-2H@critical:5H4Sp INV, NF
-2C-Over 2D-2S@critical:5Sp INV, NF, 5332, 5422, 5431
-2C-Over 2D-3M@important:Smolen, 5oM-4M GF
-2C-Over 2H@normal:2Sp: GI 5Sp, 3Sp BAL/SPL SLI where 3NT asks and 4H shows SPL
-2C-Over 2S@normal:3H: BAL SLI in Sp
-2C-Over 2M@critical:2NT INV with 4oM, 3NT GF with 4oM
-2D-2H-2S@critical:5H GI, 5332/5422/5431
-2D-2H-2N/3C@critical:INV+, 4+Cl/D, 55+ if only GI
-2D-2H-3D@critical:INV= or SLI with 6+H
-2D-2H-3H@critical:INV, NF, 5Sp-5H
+2C-Over 2D-2H@important:P/C, can be 3Sp-4H-5+Cl weak (he will bid 3Cl over 1NT-2Cl-2D-2H-2Sp)
+2C-Over 2D/2H-2S@normal:5Sp INV, NF, not 5-5, BAL or 54
+2C-Over 2D-3C@important:GF asking, over this 3D is 5+m and can be asked with 3H (3Sp: Cl, 3NT: D), 3M is 3crd with 4432 and 3NT is 4333
+2C-Over 2D-3M@important:Smolen, 5oM-4M GF+ (with 5H4Sp SLI you can bid 1NT-2D-2H-2Sp if you want)
+2C-Over 2D-4C/4D@important:H/Sp SLI+ 46/64
+2C-Over 2D-4H/4S@important:NAT, TP, 46/64
+2C-Over 2H@important:4Cl/4D: SPLs, 3Sp BAL/SPL where 3NT asks and 4H shows SPL
+2C-Over 2S@normal:3H: BAL SLI in Sp, 4Cl/4D/4H: SPLs
+2C-Over 2M-3C@normal:GF asking, over this 3D is 4M-4+m and can be asked with 3H (3Sp: Cl, 3NT: D), 3M is 5crd, 3oM is 44, 3NT is 4333.
+2C-Over 2D/2M-2N@normal:INV, BAL, NF
+2C-Over 2D/2M-3D@important:GF 5+m (3H is asking: 3Sp:Cl, 3NT:D NF, 4D:D forcing (ORKC))
+2D-2H-2S@normal:Transfer to NT, 5H INV BAL/54 or 5H BAL SLI
+2D-2H-2S-2N@important:NAT, WK, NF (but with 4Sp you can not pass)
+2D-2H-2S-2N-3m@important:4Sp-5H-3+m, NF (everything is NF over this)
+2D-2H-2S-2N-3H@important:4Sp-5H-2-2, NF (everything is NF over this)
+2D-2H-2S-2N-3N@normal:5H BAL SLI
+2D-2H-2S-3S@important:GF 4Sp, bid 3NT/4Sp over this
+2D-2H-2N/3C@normal:INV+, 4+Cl/D, 55+ if only INV
+2D-2H-3D@normal:INV= or weak SLI with 6+H
+2D-2H-3H@normal:INV, NF, 5Sp-5H
 2D-2H-3S/4C/4D@normal:SPL, SLI
-2H-2S-2N/3C@critical:INV+ 4+Cl/D, 55+ if only GI
-2H-2S-3D@critical:WK 55+ H and Sp, either WK or GF (in this case he'll bid 3NT over 3M).
-2H-2S-3H@critical:INV= or SLI with 6+Sp
-2S@normal:BAL INV or 6+Cl, bid 2NT if wouldn't accept BAL INV, 3M from responder is SPL
+2H-2S-2N/3C@normal:INV+ 4+Cl/D, 55+ if only INV
+2H-2S-3D@normal:GF 55+ H and Sp, over 3M: serious situation (over 3NT: 4Cl/4D: SLI+ 5Sp6H/6Sp5H, 4H/4Sp: only GF 5Sp6H/6Sp5H)
+2H-2S-3H@normal:INV= or weak SLI with 6+Sp
+2H-2S-3S@important:5Sp SLI BAL
+2D/2H-2M-2N-3C/3M/3N/4M@normal:NF
+2D/2H-2M-2N-3D@important:GF, Cl support (over this: 3H: no D stopper, 3Sp: no oM stopper)
+2D/2H-2M-2N-3oM@important:GF in M (serious situation)
+2D/2H-2M-3C-3D/3M/3N/4M@nofmral:NF
+2D/2H-2M-3C-3oM@important:GF, D support
+2D/2H-2M-3C-4C@important:GF M, better for slam than 4M
+2D/2H-2M-2N/3C-4m@important:GF, support in both, over this if R is not 4M then it's RKC m, 4M+1 is RKC M
+2S@important:6+Cl, bid 3Cl if wouldn't accept INV, 3M from responder is SPL
 2N@normal:6+D, bid 3D if wouldn't accept INV, 3M from responder is SPL
 3C@normal:SO, 55+ in minors
-3D@normal:GF, minors, 3H/Sp shows preference in Cl/D, 3NT is TP
-3M@normal:SPL in M, GF
-4C@critical:65+M GF, over which 4D asks for the longer
-4D/4H@important:Transfer to H/Sp, 4M+1 is RKC, other bids are Exclusion, if M=H 4NT=Exclusion Sp
-4S@important:NAT TP
-EXT@important:Over 1NT-2D/2H-2NT/3C: 3m/3M is NF, 3NT/4M is TP, 3Sp/4Cl/4D/4H is cuebid (M fit), 3om is GF (minor fit)
+3D@normal:GF, minors, 3H/Sp shows preference in Cl/D, 3NT is TP (over this: 4m: ORKC, 4H/4Sp: 5-5, singleton in H/Sp)
+3M@normal:SPL in M, GF (Over this: 4m: fit, relay is RKC question, 4M: support in both minors)
+4C/4D@important:H/Sp STR SLI/SF, 4M-1 is accept, 4M is no accept
+4H/4S@important:NAT, TP
+2D/2H-2M-4M@important:TP, NOT SLI
+EXT@important:Superaccept: 2NT: HHx, 3M: good hand, but not superaccept (working minimum), 3M-2: doubleton oM (Ax,Kx,xx), first other bid: doubleton minor (Ax,Kx,xx), over which relay is asking: 3m: doubleton OTHER minor (at H), 3H/3Sp: doubleton Cl/D (at Sp).
+EXT@normal:Over 2Cl: 2H then 3Sp from opener is 4-4 Majors, stronger hand than the other way.
 
 #Entry for situation: 13
 Absolute force 2Cl opening
@@ -349,24 +384,10 @@ Absolute force 2Cl opening
 2N@critical:55+ in majors ANY, GF (there is serious situation after fit is declared)
 3C@critical:6+D with exactly 2/3 of the top honors (AKQ), or SLF 6+ suit
 3D@critical:6+H with exactly 2/3 of the top honors (AKQ), or SLF 6+ suit
-EXT@important:If 2Cl bid is overcalled or doubled, then pass is 0-1C, Dbl/Rdbl is 2+ C QBAL or penalty and bidding is 2+C and NAT 5+ suit. With a BAL hand 2Cl opener will normally pass the double.
-EXT@important:If opener shows 4+minor, then 4m bid from responder is always just a (good) raise, not ORKC. Over which 4m+1 bid is RKC question.
+EXT@critical:If 2Cl bid is overcalled or doubled, then pass is 0-1C, Dbl/Rdbl is 2+ C QBAL or penalty and bidding is 2+C and NAT 5+ suit. With a BAL hand 2Cl opener will normally pass the double.
+EXT@critical:If opener shows 4+minor, then 4m bid from responder is always just a (good) raise, not ORKC. Over which 4m+1 bid is RKC question.
 EXT@normal:Over 2H/2Sp/3Cl/3D transfers, acceptance declares the suit, others are natural bids.
 EXT@normal:If opener shows 6+M, then 3NT is TP, other bids are cuebids from responder.
-
-#Entry for situation: 14
-Mini Multi 2D opening
-2D*
-
-2M@normal:P/C, over 2Sp with H suit: 2NT: STR UBAL, 3Cl STR BAL, 3D WK H
-2N-3C@normal:STR, 3D asks for suit, 3M shows the oM
-2N-3D/3H@normal:WK H/Sp
-3C@normal:TP
-3D@normal:GI+ asking major support in oM, responses are: 3M no 3 card oM, 4Cl/4D H/Sp with 3 card oM
-3M@normal:P/C
-4C/4D@normal:Transfer/Bid your suit
-4M@normal:TP
-EXT@important:Over 2D-(Dbl) Pass is TP, Rdbl shows a suit over which 2D opener bid's the oM, and 2H is P/C
 
 #Entry for situation: 15
 Weak 2X opening
@@ -384,37 +405,12 @@ Weak 2X opening
 2N-3D@normal:WK/GS, If 2M was V opening (or overcall) GS is six card and contains exactly two top honors (with AKQxxx bid 3NT)
 2N-3H@normal:STR/BS, GF, 2H-2NT-3X-3Sp is NAT 5+Sp F1, 2Sp-2NT-3C/3D-3Sp is TP, 2Sp-2NT-3H-3Sp is GF pick-a-game or SLI
 2N-3S@normal:STR/GS, GF
-3m@normal:TP
+3m@important:NAT, semiforcing
 4M@normal:TP
 EXT@normal:Few tips to remember the 2M-2NT responses: 3D is always GS, this way the opponents have less opportunity to double for D lead against 3NT as GS suggest a 4M for game. The mathematicians way is to take the two variables (strength and suit), and alternate the bids accordingly to the binary system (00, 01, 10, 11).
 EXT@normal:I've decided not to play 2H-2Sp-2NT and 2D-2Sp-2NT is WK 3+Sp, as this is such a marginally small part of the system that it doesn't worth to complication
 EXT@important:After NV opening the good/bad suit equals 6/5 cards in the suit.
 EXT@important:Over 2M-2NT-3X: 3NT/4H/4Sp is always TP, 4m is CB SLI, RKCB is only possible with 4m CB first or after 2Sp-2NT-3H-3Sp.
-
-#Entry for situation: 16
-Weak two suiter 2M opening
-*
-
-2M-2S/3m/4m@normal:P/C
-2M-2N@normal:R, asking strength and other suit
-2M-2N-3C@normal:Cl no ZONE, 3D is R asking further, 4Cl is ORKC
-2H-2N-3C-3D-3H@normal:WK, over this 3Sp is asking for short suit, with responses 3NT: Sp, 4Cl: D, 4D: both
-2H-2N-3C-3D-3S/3N/4C@normal:STR Cl, with short suit responses 3Sp: Sp, 3NT: D, 4Cl: both
-2H-2N-3D@normal:WK D, over this 3Sp is asking for short suit, with responses 3NT: Sp, 4Cl: Cl, 4D: both
-2H-2N-3H@important:WK Sp, over this 4Cl is asking for short suit, with responses 4D: D, 4H: Cl, 4Sp: 5611/6511, over this 4NT is RKC in H, 5Cl is RKC in Sp
-2H-2N-3S@important:STR Sp, over this 4Cl is asking for short suit, with reponses 4D: D, 4H: Cl, 4Sp: both, over this 4NT is RKC in H, 5Cl is RKC in Sp
-2H-2N-3N@normal:STR D, over this 4Cl is asking for short suit, with reponses 4D: Sp, 4H: D, 4Sp: both
-2S-2N-3C-3D-3H@important:WK Cl, over this 4Cl is ORKC, 4D is asking for short suit with responses 4H: H, 4Sp: D, 4NT: both
-2S-2N-3C-3D-3S/3N/4C@normal:STR Cl, with short suit responses, 3Sp: H, 3NT: D, 4Cl: both
-2S-2N-3D@normal:WK D, over this 3H is short suit asking with responses 3Sp: H, 3NT: Cl, 4Cl: both
-2S-2N-3H/3S/3N@important:STR D, with short 3H: H, 3S: Cl, 3NT: both, over this 4D is ORKC
-4oM/5m@normal:TP, except 2Sp-5Cl which is still P/C
-EXT@important:With the exception of when the 2H opener's side suit is Sp, once 2M opener has shown full distribution 3M or the first non-TP bid is R, and our line may  only play the opener's side suit on a slam level. Over this R bid the first step shows a void, the next 4 steps are RKC responses in M with singleton. If void is impossible due to 6511 distribution, than only RKC responses are given.
-EXT@important:After 2M opener has declared it's suits, and has shown a M+m two-suiter, the 4m bid is ORKC. If the strong hand wishes to asks with the minor suit as trump, it has the bid a 4m ORKC immediately after the response over 2NT.
-EXT@important:If any R bid get's doubled, Pass/Rdbl become steps in the responding structure. If a R response is doubled, Pass takes the places of the first non-TP  id, and thus becomes an asking bid. This logic only applies after weak two suiter 2M opening in the system.
-EXT@normal:Over 2M-(Dbl), Pass is TP, Rdbl shows a suit and asks 2M opener to bid his first short suit. Otherwise system is on.
-EXT@normal:If 2M is overcalled, then dbl is penalty from partner.
-EXT@normal:This is the only case, when UDB responses are given for shortness question in the system.
 
 #Entry for situation: 17
 2NT opening
@@ -466,17 +462,19 @@ EXT@important:Over (1m)-2m-(Pass)-???: 2D is pick-a-major F1, 3m is 33+M INV, 2N
 EXT@important:Over (1M)-2M-(Pass)-???: 3Cl is pick-a-minor, 3D is INV 3+oM, 2NT is GI+ over which 3m is WK 55+, 3H/Sp is STR 55+ with H=Cl and Sp=D
 EXT@important:Save The System situation over 1NT-(P)-2Cl/2Sp-(Dbl), 1NT-(P)-2Sp-(Dbl), 2NT-(P)-3Cl-(Dbl), 1M-(P)-2Cl-(Dbl), over Gazzili 2Cl's double, over Gazzilli 2Cl-2D's double, but not over 1M-(P)-2Cl-(P)-2D-(Dbl). Redouble offers to play 2Clxx, pass shows stopper or wants 2Clxx, bidding denies stopper
 EXT@important:Over Transfer's double, 2M/Rdbl is 3crd M and with/without stopper, pass shows doubleton. For example over 1NT-(P)-2D/2H-(Dbl), 2NT-(P)-3D/3H/4D/4H-(Dbl), 1NT-(P)-4C/4D-(Dbl), 1M-(Dbl)-2X-(Dbl). Rdbl after pass is re-transfer.
-EXT@important:PODI, PORI, PEDO over double of 4NT/Exclusion RKCB, Spiral step, ORKC response, or two-suiter 2M's ART R.
+EXT@important:PODI, PORI, PEDO over double of 4NT/Exclusion RKCB, Spiral step, ORKC response, or two-suiter 2M's ART R. PNS ROBI is only over double of 4Sp (H RKC).
 EXT@important:Automatic Ace Redouble situation in any other situation that is not otherwise specified, for example over CB, Splinter, FIT INV CB, or over normal RKCB's double if not 4NT. If double was below 3NT then Rdbl is stopper with A or K. NT bid is double stopper without A or K. CB is void. Bidding a suit shows singleton. Pass is everything else after which Rdbl is asking for stopper.
 EXT@important:Against 2NT WK minors and 3NT Gambling, 3/4Cl is majors with better H, 3/4D is majors with better Sp, Dbl is STR, Dbl after Dbl is PEN.
-EXT@important:3D is 3+M fit INV+ for Multy Landy 2M.
-EXT@critical:If an 1M overcall is doubled then system after normal 1M-(Dbl) is played. Redouble is strong, transfer to 2M-1 is 7-10 raise, 2NT is 3=H INV+, Bergens, etc. Transfer to opponents suit is transfer.
+EXT@important:3D is 3+M fit INV+ for Multi Landy 2M.
+EXT@important:(1X)-p-(p)-1NT: NAT, QBAL, 12-15 HCP in NV, 13-16 HCP in V (stayman, transfers, continuation is as over 1NT opening with different zones).
+EXT@important:(1X)-p-(p)-2NT: NAT, QBAL, 17-19 HCP (continuation is as over 2NT opening with different zones). (?)
+EXT@important:If an 1M overcall is doubled then system after normal 1M-(Dbl) is played. Redouble is strong, transfer to 2M-1 is 7-10 raise, 2NT is 3=H INV+, Bergens, etc. Transfer to opponents suit is transfer.
 
 #Entry for situation: 19
 Defense
 *
 
-EXT@critical:4th best leads against NT from suits with honor, highest sacrificable otherwise. 3rd/5th leads against suit. Lead top of inner sequence if KJT, QT9 and 2nd if AJT, KT9, QT9, JT9.
+EXT@critical:Attitude leads against NT and 3rd/5th leads against suit. Lead top of inner sequence if KJT, QT9 and 2nd if AJT, KT9, QT9.
 EXT@normal:Leading K from AK suggest a doubleton or shortness in the suit that the player will consequently play. Against contracts on the 5th level or higher, or against doubled contracts on the 4th, lead the K from A/K so partner can give count, as he would signal suit preference in case the ace was lead. If the A is lead from AK against high contracts that suggest the doubleton or the shortness in the suit consequently played.
 EXT@important:Anti-lead directing doubles from only that hand that showed a 5+ suit during auction. His partner's double shows top honor in the suit. If partners natural 1M/2M overcall gets doubled, than Rdbl is Rosenkrantz, showing doubleton and a top honor.
 
@@ -484,8 +482,8 @@ EXT@important:Anti-lead directing doubles from only that hand that showed a 5+ s
 Extension
 *
 
+EXT@critical: In any ORCK situation responses are R1: Not accepting, R2: 0-3, R3: R4: 2-Q, R5: 2+Q. Over R1 4NT/5m is TP if ORCK was in minor suit. Queen asking is always on, even if 4NT would be the relay.
 EXT@important:Over 3D/3H/3Sp preemptive opening 4Cl is ORKC in the suit of the opener. Over 3Cl/4Cl preemptive opening 4D is RKC in Cl. Over 4D/4H/4Sp opening any 4M bid (including 4H-4Sp) is TP, 4NT is RKC.
-EXT@normal:Exclusion, Serious, PODI, PORI, PEDO, but no classic PNS-ROBI
 EXT@normal:Multi against multi 2D opening (Double shows major)
 EXT@important:When 4m is unspecified by the system and could be ORKC or NAT too, it is always ORKC if the line is known to be GI+(A) or there isn't a bid that could show GF values without promising anything else below 3NT(B). Otherwise if partner has bid an NF bid and the opponent following passed or doubled(C) or partner was a preemptive opener (D) 4m is NAT. In any other case, if 6m is remotely possible 4m is ORKC (E). Note that jumping 4m bids are usually SPL in GF, and are not an exception to the rule, as jumps in GF are specified as SPL by the system.
 EXT@important:Examples for the rule above. 1Cl-1H-2Sp-2NT-3Cl-4Cl (ORKC as in A), 1H-2Cl-2H-2NT-3NT-4Cl (ORKC as in A). 1m-(3M)-4m (ORKC as in B), 1NT-(3X/4Cl)-4m (ORKC as in B). 1m-3m-4m (NAT as in C), (1/2X)-Dbl-(Pass/1/2Y)-2m-(Pass)-4m (NAT as in C). 3D-4D (NAT as in D), 1Cl-(Pass)-1H-(2Sp)-Pass-(Pass)-4Cl (ORKC as in E).
@@ -493,6 +491,8 @@ EXT@important:Spiral continuation after RKCB/ORKC. Opponents 5+ suit goes last, 
 EXT@important:After the first spiral ask the questioning queue for both players will not change. The bids skipped by the responder show held cards, the bids skipped by the questioner show cards he's not interested in. First relay over is always denying/asking the next cards in the queue.
 EXT@important:CB on the 4th level shows 1st or 2nd round control. If no CB was bid on the 4th level (SPL is not considered CB), CB on the 5th level shows 1st or 2nd round control, otherwise CB on the 5th level shows 1st round control (A or void). CB in the partner's suit can only be bid with A or K, on both the 4th and 5th level.
 EXT@important:4NT is always forcing after ORKC. Over 4M+1 RKCB or 4m ORKC additinal 4 bids (03,14,2,2+Q) may be bid if responder wishes to bid void.
+EXT@important:We show stoppers over inverted minor raises and 1D-2Cl (and 1Cl-1D-2Cl/2D), over others: we show no stoppers.
+
 
 #Entry for situation: 21
 Famous historical events
@@ -502,7 +502,9 @@ EXT@important:(Pass)-1Cl-(Pass)-1Sp-(2H)-Dbl-(5H)-???: Pass is forcing, 5NT is R
 EXT@important:1Sp-(2H)-Pass-(Pass)-3m: (15)16+ HCP and (4)5+ suit (Syl)
 EXT@important:1H-(4Sp)-4NT and 1Sp-(4H)-4NT is RKCB (Honti)
 EXT@important:1H-2Cl-2Sp-4H-4NT is CB 1st or 2nd round control in Sp (SzCsabi)
-EXT@important:(2H)-2NT-(Pass)-3C: Puppet Stayman to avoid confusion (IBBF)
+EXT@important:(2H)-2NT-(Pass)-3Cl: Puppet Stayman to avoid confusion (IBBF)
 EXT@important:2NT-(3Sp)-Pass-(Pass)-Dbl-(Pass)-4NT: Minors
-EXT@critical:2Cl-(3Sp)-Dbl-(Pass)-4D: ORKC
-
+EXT@important:2Cl-(3Sp)-Dbl-(Pass)-4D: ORKC
+EXT@important:1D-(Pass)-1Sp-(2H)-3H: Asking for stopper in H (Amsterdam, Netherlands-Hungary, 2014)
+EXT@important:1M-2X-3M, can any 6 or 7 card playable with one loser opposite a singleton, e.g. KQJTxxx or AQJT8xx. Over this 4m is ORKC, 3NT is serious. (SzCsabi)
+EXT@important:1m-1M-2NT-3M-3NT-4m: ORKC (SzCsabi)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bridge System Editor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+
+        <script data-main="js/editor" src="js/lib/require.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid" id="main-container">
+
+            <div class="row top-content" id="top">
+                <div class="col-md-6 editor-control">
+                    <form class="form-horizontal" role="form">
+                        <input type="hidden" name="token" id="token" value="ecbfde1394f2dfe02d50081d8a35dba6"/>
+                        <input type="hidden" class="form-control" value="http://localhost/system/pot" name="url" id="url"/>
+
+                        <div class="form-group">
+                            <label for="url" class="control-label col-sm-1">Author:</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" placeholder="Your name..." name="author" id="author"/>
+                            </div>  
+                            <div class="col-sm-8 editor-buttons">                          
+                                <button type="submit" class="btn btn-primary pull-right" id="save_button">Save!</button>
+                                <button type="button" class="btn btn-success pull-right" id="pretty_button">Make it pretty!</button>  
+                                <button type="button" class="btn btn-warning pull-right" id="render_button">Show me!</button>  
+                            </div>                          
+                        </div>
+                    </form>
+                    <p id="error_text" class="bg-danger"></p>
+                </div>       
+                <div class="col-md-6 renderer-control"></div>        
+            </div>
+
+            <div class="row page-content">
+                <div class="col-md-6 editor-wrapper editor-control">
+                    <textarea id="editor" rows="30" class="form-control"></textarea>
+                </div>
+                <div class="col-md-6 view-wrapper renderer-control">
+                    <div id="rendered_content"></div>                    
+                </div>
+            </div>
+        </div>
+        <script>
+        </script>
+    </body>
+</html>

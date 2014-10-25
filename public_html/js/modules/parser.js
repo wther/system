@@ -60,7 +60,7 @@ define(['modules/bidParser'], function (bidParser) {
         }
 
         return retVal;
-    }
+    };
 
     /**
      * Parse bidding string
@@ -132,7 +132,7 @@ define(['modules/bidParser'], function (bidParser) {
         // set the value for tag, otherwise it's proceeded 
         // by the explanation immediately
         var tag = (result[3] !== undefined) ? result[3] : 'normal';
-        var explanation = result[4]
+        var explanation = result[4];
 
         return {
             bidding: bidding,

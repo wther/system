@@ -101,7 +101,7 @@ define(['jquery'], function ($) {
         var longestSequence = 0;
         
         var hasAnyNotExtension = false;
-
+        
         // Fill in cells best effort
         for (i in input) {
             var row = [];
@@ -148,7 +148,21 @@ define(['jquery'], function ($) {
      * How should we render cells
      */
     var defaultCellRenderer = function (cellText) {
-        return cellText.replace(/!/g, '');
+        var raw = cellText.replace(/!/g, '');
+        raw = raw.replace(/([1-7])C/g, '$1&clubs;');
+        raw = raw.replace(/([1-7])S/g, '$1&spades;');
+        raw = raw.replace(/([1-7])D/g, '$1<span class="red">&diams;</span>');
+        raw = raw.replace(/([1-7])H/g, '$1<span class="red">&hearts;</span>');
+        raw = raw.replace(/([1-7])N/g, '$1NT');
+        return raw;
+    };
+    
+    var defaultTextRenderer = function text(raw){
+        raw = raw.replace(/\!C/g, '&clubs;');
+        raw = raw.replace(/\!S/g, '&spades;');
+        raw = raw.replace(/\!D/g, '<span class="red">&diams;</span>');
+        raw = raw.replace(/\!H/g, '<span class="red">&hearts;</span>');
+        return raw;
     };
 
     /**
@@ -156,12 +170,15 @@ define(['jquery'], function ($) {
      * @param {type} cells
      * @returns JQuery Object
      */
-    var renderCells = function (cells, cellRenderer) {
+    var renderCells = function (cells, cellRenderer, textRenderer) {
 
         if (cellRenderer === undefined) {
             cellRenderer = defaultCellRenderer;
+        };
+        
+        if(textRenderer === undefined){
+            textRenderer = defaultTextRenderer;
         }
-        ;
 
         var table = $('<table>');
 
@@ -198,7 +215,12 @@ define(['jquery'], function ($) {
                         }
                     }
 
-                    cell.html(cellRenderer(cells[y][x].value));
+                    if(x == cells[y].length - 1){
+                        cell.html(textRenderer(cells[y][x].value));
+                    } else {
+                        cell.html(cellRenderer(cells[y][x].value));
+                    }
+                    
                     row.append(cell);
                 }
             }
@@ -212,9 +234,13 @@ define(['jquery'], function ($) {
     /**
      * Render only rows with extensions
      */
-    var renderExtensions = function (input) {
+    var renderExtensions = function (input, textRenderer) {
         var div = $('<div>');
         div.addClass('extensions-wrapper');
+        
+        if(textRenderer === undefined){
+            textRenderer = defaultTextRenderer;
+        }
 
         // Iterate through all rows only searching for extensions
         for (i in input) {
@@ -231,14 +257,25 @@ define(['jquery'], function ($) {
                 row.addClass('extension extension-' + current.tag[key]);
             }
 
-            row.html(current.explanation);
+            row.html(textRenderer(current.explanation));
             div.append(row);
         }
 
         return div; 
     };
 
-    var renderWithJQuery = function (situations, jqueryDestination) {
+    var renderWithJQuery = function (situations, jqueryDestination, filterLinesFunction, textRenderer) {
+        
+        if(filterLinesFunction === undefined){
+            return function(data){
+                // Default is that there is no actual 
+                return data.lines;
+            }
+        };
+        
+        if(textRenderer === undefined){
+            textRenderer = defaultTextRenderer;
+        }
 
         // Render each situation
         for (situationId in situations) {
@@ -248,16 +285,21 @@ define(['jquery'], function ($) {
 
             var head = $('<h2>');
             head.addClass('situation-header');
-            head.html(situations[situationId].title);
+            head.html(textRenderer(situations[situationId].title));
             div.append(head);
             
-            var cells = prepareCells(situations[situationId].lines);
+            var cells = prepareCells(filterLinesFunction(situations[situationId]));
+            var extensionDiv = renderExtensions(situations[situationId].lines);
+            
+            if(cells.length == 0 && extensionDiv.is(':empty')){
+                continue;
+            }
 
             var table = renderCells(cells);
             table.addClass('table table-bordered situation-table');
             div.append(table);
 
-            div.append(renderExtensions(situations[situationId].lines).html());
+            div.append(extensionDiv.html());
             $(jqueryDestination).append(div); 
         }
     };
@@ -267,6 +309,7 @@ define(['jquery'], function ($) {
         renderCells: renderCells,
         renderExtensions: renderExtensions,
         defaultCellRenderer: defaultCellRenderer,
+        defaultTextRenderer: defaultTextRenderer,
         renderWithJQuery: renderWithJQuery
     };
 });

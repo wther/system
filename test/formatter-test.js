@@ -35,10 +35,10 @@ require(['modules/parser', 'modules/formatter'], function (parser, formatter) {
         var content = 
                "Two way checkback\n" +
                "?\n\n" + 
-               "1m-1H-1NT-2S@normal:44 INV, 2NT: pick a minor\n" +
-               "1m-1M-1NT-2D over 2C-2M@important:5(6)M, INV, NF, 2NT: pick a minor\n" + 
-               "1m-1M-1NT-2D!-2oM@normal:4oM, this 1m-1Sp-1NT-2D-2H-2Sp-3H shows singleton Sp\n" +
-               "1H-1S-1NT-2D-3H@normal:26(32)\n";
+               "1m-1H-1N-2S@normal:44 INV, 2NT: pick a minor\n" +
+               "1m-1M-1N-2D over 2C-2M@important:5(6)M, INV, NF, 2NT: pick a minor\n" + 
+               "1m-1M-1N-2D!-2oM@normal:4oM, this 1m-1Sp-1NT-2D-2H-2Sp-3H shows singleton Sp\n" +
+               "1H-1S-1N-2D-3H@normal:26(32)\n";
                 
         var situation = parser.parse(content)[0];
         
@@ -59,7 +59,7 @@ require(['modules/parser', 'modules/formatter'], function (parser, formatter) {
             "1M-(Dbl)-Rdbl@important:GI+, penalty intensions or 4+M and GF (will bid CB afterwards)\n" + 
             "1M-(Dbl)-3S/4m/4H@normal:SPL\n" + 
             "EXT@important:Over 1M-(Dbl) from passed hand system is on\n" + 
-            "EXT@normal:1M-(1NT):Cappelletti\n";
+            "EXT@normal:1M-(1N):Cappelletti\n";
     
         var situation = parser.parse(content)[0];
         
@@ -80,7 +80,7 @@ require(['modules/parser', 'modules/formatter'], function (parser, formatter) {
             "(Dbl)-Rdbl@important:GI+, penalty intensions or 4+M and GF (will bid CB afterwards)\n" + 
             "(Dbl)-3S/4m/4H@normal:SPL\n" + 
             "EXT@important:Over 1M-(Dbl) from passed hand system is on\n" + 
-            "EXT@normal:1M-(1NT):Cappelletti\n";
+            "EXT@normal:1M-(1N):Cappelletti\n";
     
         var situation = parser.parse(content)[0];
         

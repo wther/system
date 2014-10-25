@@ -30,6 +30,10 @@ body {
     background-color: #ffffff;
 }
 
+span.red {
+    color: red;
+}
+
 /**
  * Page allignment 
  */
@@ -44,6 +48,17 @@ div#main-container {
 div.top-content {
     margin-bottom: 20px;
     margin-top: 5px;
+}
+
+div.main-header {
+    margin-top: 10px;
+}
+
+div.system-title {
+    font-family: 'Coming Soon', cursive;
+    font-size: 45px;
+    font-weight: bold;
+    color: #979799;
 }
 
 /**

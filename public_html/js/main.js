@@ -34,5 +34,6 @@ require.config({
 });
 require(['modules/main'], function (main) {
     main.setupWithoutEditor();
+    main.setupSearch();
 });
 

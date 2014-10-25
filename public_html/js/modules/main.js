@@ -25,9 +25,8 @@
 /**
  * Main module
  */
-define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admin', 'jquery'], function (parser, renderer, formatter, admin, $) {
+define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admin', 'modules/matcher', 'jquery'], function (parser, renderer, formatter, admin, matcher, $) {
     var handleException = function (e) {
-
         var text = 'An error occured';
         if (e.message !== undefined) {
             text = e.toString();
@@ -40,12 +39,12 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
 
         $('#error_text').html(text);
         throw e;
-    }
+    };
 
     var hideError = function () {
         $('#error_text').hide();
         $('#error_text').html('');
-    }
+    };
 
     /**
      * Event handler for the "Make it pretty!"
@@ -89,9 +88,28 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         } catch (e) {
             handleException(e);
         }
-
+        
+        var filter = $('#search').val();
+        if(filter === undefined){
+            filter = '';
+        }
+        
+        // Step backwards to the first valid filter
+        var currentFilter = filter;
+        var filterBidding;
+        for(var i = filter.length; i >= 0; i--){
+            try {
+                var filterBidding = parser.parseBidding(currentFilter).bids;
+                break;
+            } catch (e){
+                currentFilter = currentFilter.substr(0, currentFilter.length-1);
+            }
+        }
+        
         try {
-            renderer.renderWithJQuery(situations, $('#rendered_content'));
+            renderer.renderWithJQuery(situations, $('#rendered_content'), function(situation){
+                return matcher.applyFilter(situation, filterBidding);
+            });
         } catch (e) {
             handleException(e);
         }
@@ -127,13 +145,15 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         $('#save_button').click(saveContent);
 
         // What happens on the render button?
-        $('#render_button').click(renderContent);
+        $('#render_button').click(function(){
+            renderContent();
+        });
 
         // Load system from location
         $(function () {
             admin.fetch($('#url').val(), function (data) {
                 $('#editor').removeAttr('readonly');
-                $('#editor').val(data.content);
+                $('#editor').val(data.latest.content);
                 renderContent();
             });
         });
@@ -143,8 +163,16 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         // Load system from location
         $(function () {
             admin.fetch($('#url').val(), function (data) {
-                renderContent(data.content);
+                renderContent(data.latest.content);
             });
+        });
+    };
+    
+    var setupSearch = function() {
+        $('#search').keyup(function(){
+            if(localStorage.getItem('content') !== undefined){
+                renderContent(localStorage.getItem('content'));
+            }
         });
     };
 
@@ -153,7 +181,8 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         renderContent: renderContent,
         formatContent: formatContent,
         setupWithEditor: setupWithEditor,
-        setupWithoutEditor: setupWithoutEditor
+        setupWithoutEditor: setupWithoutEditor,
+        setupSearch: setupSearch
     }
 });
 

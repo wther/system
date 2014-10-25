@@ -30,7 +30,7 @@ require_once('php/db.php');
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 $args = explode('/', $query);
 
-$resource = $args[0];
+$system = $args[0];
 
 try {
 
@@ -44,36 +44,44 @@ try {
         }
 
         $author = real_escape_string($_POST['author']);
-        $system_id = real_escape_string($resource);
+        $system_id = real_escape_string($system);
         $content = real_escape_string($_POST['content']);
 
         query("INSERT INTO system_revisions (system_id, author, date, content) VALUES ('$system_id', '$author', NOW(), '$content')");
 
         // If this was a GET request
     } else {
-        if ($resource == 'revisions') {
-
-
-        } else {
-            // Unknown resource is assumed to be a system id            
-            $system = $resource;
-
-            $where = 'TRUE';
-            if (isset($args[1]) && $args[1] != 'latest') {
-                $where = '`date` = DATE("' . real_escape_string($args[1]) . '")';
-            }
-
-            $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE $where ORDER BY `date` DESC LIMIT 1");
-            if ($result->num_rows == null) {
-                throw new Exception("System revision not found!");
-            }
-
-            $row = $result->fetch_assoc();
-
-            header('HTTP/1.1 200 OK');
-            header('Content-type: application/json');
-            print json_encode($row);
+        $command = isset($args[1]) ? $args[1] : '';
+        $system_id = real_escape_string($system);
+        
+        // Unknown resource is assumed to be a system id            
+        $where = 'TRUE';
+        if (isset($args[1]) && $args[1] != 'latest') {
+            $where = '`date` = DATE("' . real_escape_string($args[1]) . '")';
         }
+
+        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE $where AND `system_id`='$system_id' ORDER BY `date` DESC LIMIT 1");
+        if ($result->num_rows == null) {
+            throw new Exception("System not found!");
+        }
+
+        $row = $result->fetch_assoc();
+        $rows = array();
+        $rows['latest'] = $row;
+        $rows['revisions'] = array();
+        
+        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE `system_id`='$system_id' GROUP BY(`date`) ORDER BY `date` DESC LIMIT 1");
+        
+        $previous = $row['content'];
+        while($row = $result->fetch_assoc()){
+            //$row['content'] = xdiff_string_diff($row['content'], $previous);
+            $rows['revisions'][] = $row;
+            $previous = $row['content'];
+        }
+
+        header('HTTP/1.1 200 OK');
+        header('Content-type: application/json');
+        print json_encode($rows);
     }
 } catch (Exception $e) {
     header('HTTP/1.1 200 Internal Server Error');

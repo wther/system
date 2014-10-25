@@ -104,15 +104,8 @@ require(['modules/renderer'], function (renderer) {
         assert.equal($(div).find('.extension-normal').html(), content);
     });
     
-    QUnit.test("Test renderer both with JQuery", function (assert) {
-        var json = [{"title":"Opening bids","baseBidding":{"raw":"","sequence":[],"bids":[]},"lines":[{"bidding":{"raw":"1C","sequence":["1C"],"bids":[{"sequence":"1C","value":"1C"}]},"tag":["normal"],"explanation":"3+Cl, (11)12+HCP, open 1Cl if 33 in minors, N5CM"},{"bidding":{"sequence":["EXT"],"value":["EXT"]},"tag":["important"],"explanation":"NV 2D/2M openings are QTxxx or better, with discouraged 3oM in 2M. V 2D/3m opening promises 2 of the top 3 honors in the suit."}]}] ;
-    
-        var cells = renderer.prepareCells(json[0].lines);
-        var table = renderer.renderCells(cells);
-        
-        assert.equal(table.find('tr').length, 1);
-                
-        //var div = renderer.renderCells()
+    QUnit.test("Test rendering revision tree", function (assert) {
+        var json = [{"author":"Anne","date":"2014-09-26"},{"author":"Bonnie","date":"2014-09-24"}];
     });
     
 });

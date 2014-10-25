@@ -51,7 +51,7 @@ define([], function () {
         'D': 'D', '!D': 'D',
         'H': 'H', '!H': 'H',
         'S': 'S', 'Sp': 'S', '!S': 'S',
-        'N': 'NT', 'NT': 'NT', 'SA': 'NT',
+        'N': 'N', 'NT': 'N', 'SA': 'N',
         'X': 'X', 'x': 'X',
         'Y': 'Y', 'y': 'Y',
         'Z': 'Z', 'z': 'Z',
@@ -119,7 +119,9 @@ define([], function () {
                 sequence += (sequence != '' ? '/' : '') + bidValue.sequence;
 
                 if (bidValue.embeddedBids.length == 1) {
-                    possibilities[possibilities.length] = bidValue.embeddedBids[0];
+                    for(j in bidValue.embeddedBids[0]){
+                        possibilities[possibilities.length] = bidValue.embeddedBids[0][j];
+                    }
                 } else {
                     throw new ParserError("Illegal embedded bids: " + singleBid);
                 }
@@ -136,9 +138,9 @@ define([], function () {
 
             return {
                 sequence: singleBid,
-                embeddedBids: [{
+                embeddedBids: [[{
                         'value': singleBid
-                    }]
+                    }]]
             };
 
             // Otherwise this is something like 3S
@@ -171,7 +173,7 @@ define([], function () {
                     bid.exact = true;
                 }
 
-                retVal.embeddedBids = [bid];
+                retVal.embeddedBids = [[bid]];
                 return retVal;
             } else {
                 throw new ParserError("Illegal bid: '" + singleBid + "', not a valid suit: '" + parts[2] + "'");

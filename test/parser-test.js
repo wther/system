@@ -49,7 +49,7 @@ require(['modules/parser'], function (parser) {
         var result = parser.parseLine(inputString);
         
         // Assert
-        assert.deepEqual(result.bidding.sequence, ['1C', '1X', '1NT'], "Sequence parsed");
+        assert.deepEqual(result.bidding.sequence, ['1C', '1X', '1N'], "Sequence parsed");
     });
     
     QUnit.test("Test parsing 1X-Pass-1S-Dbl-Rdbl", function (assert) {
@@ -70,7 +70,7 @@ require(['modules/parser'], function (parser) {
         
         // Assert
         assert.deepEqual(result.bidding.sequence, ['1m', '1M', '2m', '2m+1', '2M'], "Sequence parsed");
-        assert.deepEqual(result.bidding.bids[3]['transform'], '+1', "Partial sequence parsed");
+        assert.deepEqual(result.bidding.bids[3][0].transform, '+1', "Partial sequence parsed");
     });
 
     QUnit.test("Test parsing 1C with illegal suit symbol (1Cl) passes", function (assert) {
@@ -90,9 +90,11 @@ require(['modules/parser'], function (parser) {
         var result = parser.parseLine(inputString);
         
         // Assert
-        assert.deepEqual(result.bidding.sequence, ['2D', '2H', '2NT/3C'], "Sequence parsed");
-        assert.deepEqual(result.bidding.bids[2][0]['value'], '2NT', "Partial sequence parsed");
-        assert.deepEqual(result.bidding.bids[2][1]['value'], '3C', "Partial sequence parsed");
+        assert.deepEqual(result.bidding.sequence, ['2D', '2H', '2N/3C'], "Sequence parsed")
+        assert.deepEqual(result.bidding.bids[0][0].value, '2D', "2D parsed");;
+        assert.deepEqual(result.bidding.bids[1][0].value, '2H', "2H parsed");
+        assert.deepEqual(result.bidding.bids[2][0].value, '2N', "Partial sequence parsed");
+        assert.deepEqual(result.bidding.bids[2][1].value, '3C', "Partial sequence parsed");
     });
     
     QUnit.test("Test parsing 1M-(Dbl/2D)-3S/4m+1/4H!", function (assert) {
@@ -103,12 +105,13 @@ require(['modules/parser'], function (parser) {
         
         // Assert
         assert.deepEqual(result.bidding.sequence, ['1M', '(Dbl/2D)', '3S/4m+1/4H!'], "Sequence parsed");
+        assert.deepEqual(result.bidding.bids[0][0].value, '1M', "1M parsed correctly");
         assert.deepEqual(result.bidding.bids[1][0].value, 'Dbl', "Double parsed correctly");
-        assert.deepEqual(result.bidding.bids[2][0]['value'], '3S', "Partial sequence parsed");
-        assert.deepEqual(result.bidding.bids[2][1]['value'], '4m', "Partial sequence parsed");
-        assert.deepEqual(result.bidding.bids[2][1]['transform'], '+1', "Partial sequence transform parsed");
-        assert.deepEqual(result.bidding.bids[2][2]['value'], '4H', "Partial sequence parsed");
-        assert.deepEqual(result.bidding.bids[2][2]['exact'], true, "Partial sequence meta parsed");
+        assert.deepEqual(result.bidding.bids[2][0].value, '3S', "Partial sequence parsed");
+        assert.deepEqual(result.bidding.bids[2][1].value, '4m', "Partial sequence parsed");
+        assert.deepEqual(result.bidding.bids[2][1].transform, '+1', "Partial sequence transform parsed");
+        assert.deepEqual(result.bidding.bids[2][2].value, '4H', "Partial sequence parsed");
+        assert.deepEqual(result.bidding.bids[2][2].exact, true, "Partial sequence meta parsed");
     });
     
     QUnit.test("Test parsing 1C with illegal symbol fails", function (assert) {
@@ -134,11 +137,11 @@ require(['modules/parser'], function (parser) {
         var result = parser.parseLine(inputString);
         
         // Assert
-        assert.deepEqual(result.bidding.sequence, ['1NT', '2D over 2C', '2M!'], "Sequence parsed");
-        assert.deepEqual(result.bidding.bids[0].value, '1NT', "1NT parsed correctly");
-        assert.deepEqual(result.bidding.bids[1].value, '2C', "2C parsed correctly");
-        assert.deepEqual(result.bidding.bids[2].value, '2D', "2D parsed correctly");
-        assert.deepEqual(result.bidding.bids[3].value, '2M', "2D parsed correctly");        
+        assert.deepEqual(result.bidding.sequence, ['1N', '2D over 2C', '2M!'], "Sequence parsed");
+        assert.deepEqual(result.bidding.bids[0][0].value, '1N', "1NT parsed correctly");
+        assert.deepEqual(result.bidding.bids[1][0].value, '2C', "2C parsed correctly");
+        assert.deepEqual(result.bidding.bids[2][0].value, '2D', "2D parsed correctly");
+        assert.deepEqual(result.bidding.bids[3][0].value, '2M', "2D parsed correctly");        
     });
     
     QUnit.test("Test parsing 1M-(Dbl)-2M-1", function (assert) {
@@ -150,10 +153,10 @@ require(['modules/parser'], function (parser) {
         
         // Assert
         assert.deepEqual(result.bidding.sequence, ['1M', '(Dbl)', '2M-1'], "Sequence parsed");
-        assert.deepEqual(result.bidding.bids[0].value, '1M', "1M parsed correctly");
-        assert.deepEqual(result.bidding.bids[1].value, 'Dbl', "Dbl parsed correctly");
-        assert.deepEqual(result.bidding.bids[2].value, '2M', "2M parsed correctly");
-        assert.deepEqual(result.bidding.bids[2].transform, '-1', "2M's tranform parsed correctly");
+        assert.deepEqual(result.bidding.bids[0][0].value, '1M', "1M parsed correctly");
+        assert.deepEqual(result.bidding.bids[1][0].value, 'Dbl', "Dbl parsed correctly");
+        assert.deepEqual(result.bidding.bids[2][0].value, '2M', "2M parsed correctly");
+        assert.deepEqual(result.bidding.bids[2][0].transform, '-1', "2M's tranform parsed correctly");
     });
     
     //2C-Over 2D-2H@important:P/C, can be 3Sp-4H-5+Cl weak (he will bid 3Cl over 1NT-2Cl-2D-2H-2Sp)
@@ -166,9 +169,9 @@ require(['modules/parser'], function (parser) {
         
         // Assert
         assert.deepEqual(result.bidding.sequence, ['2C', 'Over 2D', '2H'], "Sequence parsed");
-        assert.deepEqual(result.bidding.bids[0].value, '2C', "2C parsed correctly");
-        assert.deepEqual(result.bidding.bids[1].value, '2D', "2D parsed correctly");
-        assert.deepEqual(result.bidding.bids[2].value, '2H', "2H parsed correctly");
+        assert.deepEqual(result.bidding.bids[0][0].value, '2C', "2C parsed correctly");
+        assert.deepEqual(result.bidding.bids[1][0].value, '2D', "2D parsed correctly");
+        assert.deepEqual(result.bidding.bids[2][0].value, '2H', "2H parsed correctly");
     });
     
     //1m-1M-1N-2D over 2C!-3C!@normal:NAT, INV, 4M
@@ -179,7 +182,7 @@ require(['modules/parser'], function (parser) {
         var result = parser.parseLine(inputString);
         
         // Assert
-        assert.deepEqual(result.bidding.sequence, ['1m', '1M', '1NT', '2D over 2C!', '3C!'], "Sequence parsed");
+        assert.deepEqual(result.bidding.sequence, ['1m', '1M', '1N', '2D over 2C!', '3C!'], "Sequence parsed");
     });
     
     //1m-1M-1NT-2D over 2C!-2NT:5M INV, m tolerance, 3m:TP
@@ -190,7 +193,7 @@ require(['modules/parser'], function (parser) {
         var result = parser.parseLine(inputString);
         
         // Assert
-        assert.deepEqual(result.bidding.sequence, ['1m', '1M', '1NT'], "Sequence parsed");
+        assert.deepEqual(result.bidding.sequence, ['1m', '1M', '1N'], "Sequence parsed");
     });
     
     

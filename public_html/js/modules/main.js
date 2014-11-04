@@ -25,7 +25,7 @@
 /**
  * Main module
  */
-define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admin', 'modules/matcher', 'jquery'], function (parser, renderer, formatter, admin, matcher, $) {
+define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admin', 'modules/matcher', 'modules/revisions', 'jquery'], function (parser, renderer, formatter, admin, matcher, revisions, $) {
     var handleException = function (e) {
         var text = 'An error occured';
         if (e.message !== undefined) {
@@ -74,20 +74,37 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
      * 
      * @returns {undefined}
      */
-    var renderContent = function (content) {
+    var renderContent = function (content, revisionData) {
         if (content === undefined) {
             var content = $('#editor').val();
         }
-
+        
+        if(revisionData === undefined){
+            revisionData = [];
+        }
+        
         hideError();
         $('#rendered_content').html('');
 
         // Parse text
         try {
             var situations = parser.parse(content);
+            
+            // Parse revisions
+            var revisionCache = revisions.parseRevisions(revisionData);
+            var hash = revisions.revisionHash(revisionData);
+            
+            for(i in situations) for(j in situations[i].lines){
+                var line = situations[i].lines[j];
+                if(revisionCache[line.raw] !== undefined){
+                    line['revision'] = hash[revisionCache[line.raw]];
+                }
+            }
+            
         } catch (e) {
             handleException(e);
         }
+        
         
         var filter = $('#search').val();
         if(filter === undefined){
@@ -106,6 +123,7 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
             }
         }
         
+        // Render content
         try {
             renderer.renderWithJQuery(situations, $('#rendered_content'), function(situation){
                 return matcher.applyFilter(situation, filterBidding);
@@ -163,7 +181,14 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         // Load system from location
         $(function () {
             admin.fetch($('#url').val(), function (data) {
-                renderContent(data.latest.content);
+                // Show content
+                localStorage.setItem('content', data.latest.content);
+                renderContent(data.latest.content, data.revisions);
+                                
+                        
+                // Show revisions
+                var revisionDiv = renderer.renderRevisions(data.revisions);
+                $('#revision_content').append(revisionDiv);
             });
         });
     };
@@ -183,6 +208,6 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         setupWithEditor: setupWithEditor,
         setupWithoutEditor: setupWithoutEditor,
         setupSearch: setupSearch
-    }
+    };
 });
 

@@ -194,7 +194,7 @@ define(['modules/parser'], function (parser) {
             retVal[retVal.length] = bids[i];
         }
         return retVal;
-    }
+    };
 
     /**
      * Determines whether the sequence bids matches the bidding of criteria
@@ -216,9 +216,6 @@ define(['modules/parser'], function (parser) {
             return true;
         }
         
-        //console.log(leftKey);
-        //console.log(rightKey);
-        
         for(i in leftKey){
             if(rightKey[i] !== undefined){
                 return true;
@@ -232,9 +229,7 @@ define(['modules/parser'], function (parser) {
      * Filter situations
      */
     var applyFilter = function(situation, filterBidding){
-        
-        //console.log(filterBidding);
-        
+                
         if(filterBidding.length == 0){
             return situation.lines;
         }

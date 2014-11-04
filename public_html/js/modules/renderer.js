@@ -25,7 +25,7 @@
 /**
  * Table renderer for bidding
  */
-define(['jquery'], function ($) {
+define(['jquery', 'modules/revisions'], function ($, revisions) {
 
     var RenderError = function (message) {
         this.message = message;
@@ -47,7 +47,7 @@ define(['jquery'], function ($) {
                 collapseCellsFunc(cells, fromX + 1, currentHead, y);
             }
         }
-    }
+    };
 
     /**
      * Private function to collapse matching cells
@@ -99,7 +99,7 @@ define(['jquery'], function ($) {
         var cells = [];
 
         var longestSequence = 0;
-        
+
         var hasAnyNotExtension = false;
         
         // Fill in cells best effort
@@ -110,7 +110,7 @@ define(['jquery'], function ($) {
             if (sequence !== undefined && sequence.length > 0 && sequence[0] == 'EXT') {
                 continue;
             }
-            
+
             hasAnyNotExtension = true;
 
             longestSequence = Math.max(longestSequence, sequence.length + 1);
@@ -127,6 +127,7 @@ define(['jquery'], function ($) {
             row[row.length] = {
                 value: input[i].explanation,
                 tag: input[i].tag,
+                revision: input[i].revision,
                 height: 1
             };
 
@@ -137,7 +138,7 @@ define(['jquery'], function ($) {
 
 
         // Collapse cells
-        if(hasAnyNotExtension){
+        if (hasAnyNotExtension) {
             collapseCells(cells, 0, 0, cells.length);
         }
 
@@ -156,8 +157,8 @@ define(['jquery'], function ($) {
         raw = raw.replace(/([1-7])N/g, '$1NT');
         return raw;
     };
-    
-    var defaultTextRenderer = function text(raw){
+
+    var defaultTextRenderer = function text(raw) {
         raw = raw.replace(/\!C/g, '&clubs;');
         raw = raw.replace(/\!S/g, '&spades;');
         raw = raw.replace(/\!D/g, '<span class="red">&diams;</span>');
@@ -174,16 +175,17 @@ define(['jquery'], function ($) {
 
         if (cellRenderer === undefined) {
             cellRenderer = defaultCellRenderer;
-        };
-        
-        if(textRenderer === undefined){
+        }
+        ;
+
+        if (textRenderer === undefined) {
             textRenderer = defaultTextRenderer;
         }
 
         var table = $('<table>');
 
         var tableWidth = cells.width;
-
+        
         for (var y = 0; y < cells.length; y++) {
             var row = $('<tr>');
             for (var x = 0; x < cells[y].length; x++) {
@@ -214,13 +216,20 @@ define(['jquery'], function ($) {
                             cell.addClass(cells[y][x].tag[key]);
                         }
                     }
+                    
+                    // Add revision
+                    var innerDiv = $('<div>');
+                    if (cells[y][x].height == 1 && cells[y][x].revision !== undefined) {
+                        innerDiv.addClass('revision-cell-' + cells[y][x].revision);
+                    }
 
-                    if(x == cells[y].length - 1){
-                        cell.html(textRenderer(cells[y][x].value));
+                    if (x == cells[y].length - 1) {
+                        innerDiv.html(textRenderer(cells[y][x].value));
                     } else {
-                        cell.html(cellRenderer(cells[y][x].value));
+                        innerDiv.html(cellRenderer(cells[y][x].value));
                     }
                     
+                    cell.append(innerDiv);
                     row.append(cell);
                 }
             }
@@ -237,8 +246,8 @@ define(['jquery'], function ($) {
     var renderExtensions = function (input, textRenderer) {
         var div = $('<div>');
         div.addClass('extensions-wrapper');
-        
-        if(textRenderer === undefined){
+
+        if (textRenderer === undefined) {
             textRenderer = defaultTextRenderer;
         }
 
@@ -261,19 +270,20 @@ define(['jquery'], function ($) {
             div.append(row);
         }
 
-        return div; 
+        return div;
     };
 
     var renderWithJQuery = function (situations, jqueryDestination, filterLinesFunction, textRenderer) {
-        
-        if(filterLinesFunction === undefined){
-            return function(data){
+
+        if (filterLinesFunction === undefined) {
+            return function (data) {
                 // Default is that there is no actual 
                 return data.lines;
-            }
-        };
+            };
+        }
         
-        if(textRenderer === undefined){
+
+        if (textRenderer === undefined) {
             textRenderer = defaultTextRenderer;
         }
 
@@ -287,11 +297,11 @@ define(['jquery'], function ($) {
             head.addClass('situation-header');
             head.html(textRenderer(situations[situationId].title));
             div.append(head);
-            
+
             var cells = prepareCells(filterLinesFunction(situations[situationId]));
             var extensionDiv = renderExtensions(situations[situationId].lines);
-            
-            if(cells.length == 0 && extensionDiv.is(':empty')){
+                        
+            if (cells.length == 0 && extensionDiv.is(':empty')) {
                 continue;
             }
 
@@ -300,8 +310,66 @@ define(['jquery'], function ($) {
             div.append(table);
 
             div.append(extensionDiv.html());
-            $(jqueryDestination).append(div); 
+            $(jqueryDestination).append(div);
         }
+    };
+
+    /**
+     * Formats date in a "4 days" or "5 months" format depending on how many time elapsed since the date
+     */
+    var timeSince = function (date) {
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+
+        var interval = Math.floor(seconds / 31536000);
+
+        if (interval > 1) {
+            return interval + " years";
+        }
+        interval = Math.floor(seconds / 2592000);
+        if (interval > 1) {
+            return interval + " months";
+        }
+        interval = Math.floor(seconds / 86400);
+        if (interval > 1) {
+            return interval + " days";
+        }
+        interval = Math.floor(seconds / 3600);
+        if (interval > 1) {
+            return interval + " hours";
+        }
+        interval = Math.floor(seconds / 60);
+        if (interval > 1) {
+            return interval + " minutes";
+        }
+        return Math.floor(seconds) + " seconds";
+    };
+
+    var renderRevisions = function (revisionData) {
+
+        var div = $('<div>');
+        div.addClass("revision-wrapper");
+        
+        console.log(revisionData);
+
+        var hash = revisions.revisionHash(revisionData);
+
+        for (i in revisionData) {
+            var revision = revisionData[i];
+
+            var row = $('<div>');
+            row.addClass('revision-line');
+            row.addClass('revision-formatter-' + hash[revision.date]);
+            row.html(timeSince(new Date(revision.date)) + ' ago');
+            
+            var span = $('<span>');
+            span.addClass('revision-button');
+            row.prepend(span);
+            
+            div.append(row);
+        }
+
+        return div;
     };
 
     return {
@@ -310,6 +378,7 @@ define(['jquery'], function ($) {
         renderExtensions: renderExtensions,
         defaultCellRenderer: defaultCellRenderer,
         defaultTextRenderer: defaultTextRenderer,
-        renderWithJQuery: renderWithJQuery
+        renderWithJQuery: renderWithJQuery,
+        renderRevisions: renderRevisions
     };
 });

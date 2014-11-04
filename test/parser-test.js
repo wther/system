@@ -186,7 +186,7 @@ require(['modules/parser'], function (parser) {
     });
     
     //1m-1M-1NT-2D over 2C!-2NT:5M INV, m tolerance, 3m:TP
-        QUnit.test("Test parsing with no tag", function (assert) {
+    QUnit.test("Test parsing with no tag", function (assert) {
         var inputString = "1m-1M-1N:NAT, INV, 4M";
 
         // Act
@@ -194,6 +194,18 @@ require(['modules/parser'], function (parser) {
         
         // Assert
         assert.deepEqual(result.bidding.sequence, ['1m', '1M', '1N'], "Sequence parsed");
+    });
+    
+    QUnit.test("Test 1H-1 isn't valid", function (assert) {
+        // Act
+        var result = true;
+        try {
+            var result = parser.parseBidding("1H-1")
+        } catch (e){
+            result = false;            
+        }
+        
+        assert.equal(result, false);
     });
     
     

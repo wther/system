@@ -103,11 +103,6 @@ require(['modules/renderer'], function (renderer) {
         
         assert.equal($(div).find('.extension-normal').html(), content);
     });
-    
-    QUnit.test("Test rendering revision tree", function (assert) {
-        var json = [{"author":"Anne","date":"2014-09-26"},{"author":"Bonnie","date":"2014-09-24"}];
-    });
-    
 });
 
 

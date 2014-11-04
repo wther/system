@@ -106,3 +106,44 @@ table.situation-table td.changed, div.extension-changed{
 div.extension-normal {
     background-color: #DDDDFF;
 }
+
+/**
+ * Revisions
+ */
+
+div.revision-line span.revision-button {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px; 
+    display:block;
+    float: left;
+    margin: 0px 8px;
+}
+
+div.revision-formatter-0 span.revision-button { background-color: #dff0d8; }
+div.revision-cell-0 { border-right: 15px solid #dff0d8; }
+
+div.revision-formatter-1 span.revision-button { background-color: #d9edf7; }
+div.revision-cell-1 { border-right: 15px solid #d9edf7; }
+
+div.revision-formatter-2 span.revision-button { background-color: #F3C1CA; }
+div.revision-cell-2 { border-right: 15px solid #F3C1CA; }
+
+div.revision-formatter-3 span.revision-button { background-color: #f2dede; }
+div.revision-cell-3 { border-right: 15px solid #f2dede; }
+
+div.revision-formatter-4 span.revision-button { background-color: #B6BBBB; }
+div.revision-cell-4 { border-right: 15px solid #B6BBBB; }
+
+div.revision-formatter-5 span.revision-button { background-color: #8AA58A; }
+div.revision-cell-5 { border-right: 15px solid #8AA58A; }
+
+div.revision-formatter-6 span.revision-button { background-color: #887690; }
+div.revision-cell-6 { border-right: 15px solid #887690; }
+
+div.revision-formatter-7 span.revision-button { background-color: #B8AE7E; }
+div.revision-cell-7 { border-right: 15px solid #B8AE7E; }
+
+div.revision-line {
+    margin: 30px 0px;
+}

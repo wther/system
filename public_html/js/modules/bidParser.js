@@ -163,6 +163,12 @@ define([], function () {
 
                 // If has additional values like +1
                 if (parts[3] !== undefined) {
+                    var transfromNotAllowedFor = "SHDCN";
+                    
+                    if(transfromNotAllowedFor.indexOf(ALLOWED_SUITS[parts[2]]) >= 0){
+                        throw new ParserError("Transform not allowed for " + parts[2] + " or any of " + transfromNotAllowedFor);
+                    }
+                    
                     retVal.sequence += parts[3];
                     bid.transform = parts[3];
                 }

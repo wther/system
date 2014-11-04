@@ -70,13 +70,10 @@ try {
         $rows['latest'] = $row;
         $rows['revisions'] = array();
         
-        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE `system_id`='$system_id' GROUP BY(`date`) ORDER BY `date` DESC LIMIT 1");
+        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE `system_id`='$system_id' GROUP BY(DATE(`date`)) ORDER BY `date` ASC LIMIT 10");
         
-        $previous = $row['content'];
         while($row = $result->fetch_assoc()){
-            //$row['content'] = xdiff_string_diff($row['content'], $previous);
             $rows['revisions'][] = $row;
-            $previous = $row['content'];
         }
 
         header('HTTP/1.1 200 OK');

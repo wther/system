@@ -137,7 +137,8 @@ define(['modules/bidParser'], function (bidParser) {
         return {
             bidding: bidding,
             tag: parseTag(tag),
-            explanation: explanation !== undefined ? explanation.trim() : ''
+            explanation: explanation !== undefined ? explanation.trim() : '',
+            raw: line
         };
     };
 

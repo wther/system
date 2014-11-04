@@ -63,7 +63,7 @@ define([], function () {
             retVal += "\n";
         }
         
-        return retVal;
+        return retVal + "\n";
     };
     
     return {

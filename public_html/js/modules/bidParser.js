@@ -114,11 +114,11 @@ define([], function () {
             var sequence = '';
             var possibilities = [];
 
-            for (i in separateBids) {
+            for (var i in separateBids) {
                 var bidValue = parseSingleBid(separateBids[i]);
                 sequence += (sequence != '' ? '/' : '') + bidValue.sequence;
 
-                if (bidValue.embeddedBids.length == 1) {
+                if (bidValue.embeddedBids.length === 1) {
                     for(j in bidValue.embeddedBids[0]){
                         possibilities[possibilities.length] = bidValue.embeddedBids[0][j];
                     }

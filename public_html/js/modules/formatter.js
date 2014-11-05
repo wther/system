@@ -52,7 +52,7 @@ define([], function () {
         retVal += "\n";
         
         // Each line of bidding
-        for(j in situation.lines){
+        for(var j in situation.lines){
             var line = situation.lines[j];
             
             retVal += line.bidding.sequence.join('-');

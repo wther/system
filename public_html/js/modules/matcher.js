@@ -49,7 +49,7 @@ define(['modules/parser'], function (parser) {
      */
     var narrowToUnnamedValues = function (namedSuits, allowedValues) {
         var retVal = [];
-        for (i in allowedValues) {
+        for (var i in allowedValues) {
             if (namedSuits.indexOf(allowedValues[i]) < 0) {
                 retVal[retVal.length] = allowedValues[i];
             }
@@ -64,8 +64,8 @@ define(['modules/parser'], function (parser) {
 
         // Which suits are named in the criteria
         var namedSuits = [];
-        for (i in source) {
-            for (j in source[i]) {
+        for (var i in source) {
+            for (var j in source[i]) {
                 var suit = source[i][j].value.substr(-1);
                 
                 // If this bid is exact it means that is not a named suit
@@ -82,15 +82,15 @@ define(['modules/parser'], function (parser) {
 
         // Which suits are left unnamed?
         var unnamedSuits = [];
-        for (i in SUITS) {
+        for (var i in SUITS) {
             if (namedSuits.indexOf(SUITS[i]) < 0) {
                 unnamedSuits[unnamedSuits.length] = SUITS[i];
             }
         }
 
         var tokenAssignments = {};
-        for (i in source) {
-            for (j in source[i]) {
+        for (var i in source) {
+            for (var j in source[i]) {
                 var token = source[i][j].value.substr(-1);
                 if (TOKENS[token] !== undefined) {
                     if (tokenAssignments[token] === undefined) {
@@ -158,13 +158,13 @@ define(['modules/parser'], function (parser) {
             // This is a real suit
             if (SUITS.indexOf(suit) >= 0) {
                 var next = composeKey(source, notAssigned, pos + 1);
-                for (k in next) {
+                for (var k in next) {
                     retVal[applyTransform(rank, suit, transform) + k] = true;
                 }
                 // This is a token
             } else {
                 var allowedValues = notAssigned[suit];
-                for (j in allowedValues) {
+                for (var j in allowedValues) {
                     // This now becomes assigned
                     var value = allowedValues[j];
                     
@@ -172,7 +172,7 @@ define(['modules/parser'], function (parser) {
                     var next = composeKey(source, notAssigned, pos + 1);
                     
                     // Add all values to return value
-                    for (k in next) {
+                    for (var k in next) {
                         retVal[applyTransform(rank,value, transform) + k] = true;
                     }
                     
@@ -216,7 +216,7 @@ define(['modules/parser'], function (parser) {
             return true;
         }
         
-        for(i in leftKey){
+        for(var i in leftKey){
             if(rightKey[i] !== undefined){
                 return true;
             }
@@ -236,7 +236,7 @@ define(['modules/parser'], function (parser) {
         
         var lines = [];
         var onlyExtension = true;
-        for(i in situation.lines){
+        for(var i in situation.lines){
             var line = situation.lines[i];
             if(line.bidding.sequence.length == 1 && line.bidding.sequence[0] == 'EXT'){
                 lines[lines.length] = line;

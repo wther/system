@@ -38,14 +38,14 @@ define([], function () {
         
         // Set values for lines
         var result = {};
-        for(i in lines){
+        for(var i in lines){
             result[lines[i]] = last.date;
         }    
         
         // Iterate backwards
         for(var i = revisions.length-2; i >= 0; i--){
             var current = revisions[i];
-            for(j in result){
+            for(var j in result){
                 if(result[j] == last.date){
                     if(current.content.indexOf(j) >= 0){
                         result[j] = current.date;

@@ -23,18 +23,21 @@
                         <div class="form-group">
                             <label for="url" class="control-label col-sm-1">Author:</label>
                             <div class="col-sm-3">
+
                                 <input type="text" class="form-control" placeholder="Your name..." name="author" id="author"/>
                             </div>  
-                            <div class="col-sm-8 editor-buttons">                          
+                            <div class="col-sm-8 editor-buttons">                           
                                 <button type="submit" class="btn btn-primary pull-right" id="save_button">Save!</button>
                                 <button type="button" class="btn btn-success pull-right" id="pretty_button">Make it pretty!</button>  
                                 <button type="button" class="btn btn-warning pull-right" id="render_button">Show me!</button>  
+                                <a href="index.html" class="btn btn-default pull-right" role="button">Go Back!</a> 
                             </div>                          
                         </div>
                     </form>
                     <p id="error_text" class="bg-danger"></p>
                 </div>       
-                <div class="col-md-6 renderer-control"></div>        
+                <div class="col-md-6 renderer-control">
+                </div>        
             </div>
 
             <div class="row page-content">

@@ -36,6 +36,10 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         if (e.line !== undefined) {
             text += " in line: " + e.line;
         }
+        
+        if(e.fileName !== undefined) {
+            text += " in file: " + e.fileName;
+        }
 
         $('#error_text').html(text);
         throw e;
@@ -75,8 +79,9 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
      * @returns {undefined}
      */
     var renderContent = function (content, revisionData) {
+        
         if (content === undefined) {
-            var content = $('#editor').val();
+            content = $('#editor').val();
         }
         
         if(revisionData === undefined){
@@ -85,27 +90,8 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         
         hideError();
         $('#rendered_content').html('');
-
-        // Parse text
-        try {
-            var situations = parser.parse(content);
-            
-            // Parse revisions
-            var revisionCache = revisions.parseRevisions(revisionData);
-            var hash = revisions.revisionHash(revisionData);
-            
-            for(i in situations) for(j in situations[i].lines){
-                var line = situations[i].lines[j];
-                if(revisionCache[line.raw] !== undefined){
-                    line['revision'] = hash[revisionCache[line.raw]];
-                }
-            }
-            
-        } catch (e) {
-            handleException(e);
-        }
         
-        
+        // Prepare search
         var filter = $('#search').val();
         if(filter === undefined){
             filter = '';
@@ -122,15 +108,38 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
                 currentFilter = currentFilter.substr(0, currentFilter.length-1);
             }
         }
-        
-        // Render content
+
+        // Parse text
         try {
-            renderer.renderWithJQuery(situations, $('#rendered_content'), function(situation){
-                return matcher.applyFilter(situation, filterBidding);
-            });
+             // Parse revisions
+            var revisionCache = revisions.parseRevisions(revisionData);
+            var hash = revisions.revisionHash(revisionData);
+            
+            // Parse situations and render them as soon as they are parsed
+            parser.parse(content, function(item, i){
+                for(var j in item.lines){
+                    var line = item.lines[j];
+                    if(revisionCache[line.raw] !== undefined){
+                        line['revision'] = hash[revisionCache[line.raw]];
+                    }
+                }
+                
+                var div = $('<div>');
+                div.attr('id', 'situation_wrapper_' + i);
+                $('#rendered_content').append(div);
+                
+                // Render async
+                renderer.renderSingleWithJQuery(item, div, function(situation){
+                    return matcher.applyFilter(situation, filterBidding);
+                });
+            });       
         } catch (e) {
             handleException(e);
         }
+                    
+        // Show revisions
+        var revisionDiv = renderer.renderRevisions(revisionData);
+        $('#revision_content').html(revisionDiv.html());
     };
 
     /**
@@ -140,7 +149,7 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         var uri = $("#url").val().trim();
 
         var author = $("#author").val().trim();
-        if (author == '')
+        if (author === '')
             author = 'Anonymous';
 
         var token = $('#token').val();
@@ -183,12 +192,9 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
             admin.fetch($('#url').val(), function (data) {
                 // Show content
                 localStorage.setItem('content', data.latest.content);
+                localStorage.setItem('revisions', JSON.stringify(data.revisions));
+                
                 renderContent(data.latest.content, data.revisions);
-                                
-                        
-                // Show revisions
-                var revisionDiv = renderer.renderRevisions(data.revisions);
-                $('#revision_content').append(revisionDiv);
             });
         });
     };
@@ -196,7 +202,7 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
     var setupSearch = function() {
         $('#search').keyup(function(){
             if(localStorage.getItem('content') !== undefined){
-                renderContent(localStorage.getItem('content'));
+                renderContent(localStorage.getItem('content'), JSON.parse(localStorage.getItem('revisions')));
             }
         });
     };
@@ -210,4 +216,3 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         setupSearch: setupSearch
     };
 });
-

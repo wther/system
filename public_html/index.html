@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
 
         <script data-main="js/main" src="js/lib/require.min.js"></script>
@@ -16,26 +15,21 @@
         <input type="hidden" class="form-control" value="http://localhost/system/pot" name="url" id="url"/>
 
         <div class="row page-content">
-            <div class="row page-content">
-                <div class="col-md-6 col-md-offset-3 form-horizontal main-header">
-                    <div class="form-group">
-                        <div class="col-sm-4 system-title"></div>
-                        <div class="col-sm-4 col-sm-offset-4">
-                            <input type="text" class="form-control" placeholder="Search..." name="search" id="search"/>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-3 col-md-offset-3 form-horizontal hidden-sm hidden-xs main-header">
+                    <a href="editor.html" class="btn btn-default">Edit!</a>
+                    <p id="error_text" class="bg-danger"></p>
+            </div>
+            <div class="col-md-3 col-sm-12 form-horizontal main-header">
+                    <input type="text" class="form-control" placeholder="Search..." name="search" id="search"/>
             </div>
         </div>
 
         <div class="row page-content">
-            <div class="row page-content">
-                <div class="col-md-6 col-md-offset-3 view-wrapper renderer-control">
-                    <div id="rendered_content"></div>                    
-                </div>
-                <div class="col-md-2">
-                    <div id="revision_content"></div>
-                </div>
+            <div class="col-md-6 col-md-offset-3 view-wrapper renderer-control">
+                <div id="rendered_content"></div>                    
+            </div>
+            <div class="col-md-2">
+                <div id="revision_content"></div>
             </div>
         </div>
         <script>

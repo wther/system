@@ -103,7 +103,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
         var hasAnyNotExtension = false;
         
         // Fill in cells best effort
-        for (i in input) {
+        for (var i in input) {
             var row = [];
             var sequence = input[i].bidding.sequence;
 
@@ -115,7 +115,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
 
             longestSequence = Math.max(longestSequence, sequence.length + 1);
 
-            for (j in sequence) {
+            for (var j in sequence) {
                 var bid = sequence[j];
                 row[row.length] = {
                     value: bid,
@@ -212,7 +212,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
 
                     // Add tags as class, but only if colspan is 1
                     if (cells[y][x].height == 1 && cells[y][x].tag !== undefined) {
-                        for (key in cells[y][x].tag) {
+                        for (var key in cells[y][x].tag) {
                             cell.addClass(cells[y][x].tag[key]);
                         }
                     }
@@ -252,7 +252,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
         }
 
         // Iterate through all rows only searching for extensions
-        for (i in input) {
+        for (var i in input) {
             var sequence = input[i].bidding.sequence;
 
             if (sequence.length == 0 || sequence[0] != 'EXT') {
@@ -262,7 +262,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
             var current = input[i];
 
             var row = $('<div>');
-            for (key in current.tag) {
+            for (var key in current.tag) {
                 row.addClass('extension extension-' + current.tag[key]);
             }
 
@@ -272,9 +272,13 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
 
         return div;
     };
-
-    var renderWithJQuery = function (situations, jqueryDestination, filterLinesFunction, textRenderer) {
-
+    
+    
+    /**
+     * Render parsed situation to cells and then to HTML
+     */
+    var renderSingleWithJQuery = function (situation, div, filterLinesFunction, textRenderer) {
+                
         if (filterLinesFunction === undefined) {
             return function (data) {
                 // Default is that there is no actual 
@@ -282,34 +286,54 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
             };
         }
         
-
         if (textRenderer === undefined) {
             textRenderer = defaultTextRenderer;
         }
+        
+        div.addClass('situation-wrapper');
+
+        var cells = prepareCells(filterLinesFunction(situation));
+        var extensionDiv = renderExtensions(situation.lines);
+
+        /**
+         * There was nothing to be shown anyways
+         */
+        if (cells.length === 0 && extensionDiv.is(':empty')) {
+            return;
+        }       
+        
+        /**
+         * There was something to be shown, but it this is a search, and only
+         * relevant situations should be shown
+         */
+        if(cells.length === 0 && situation.lines.length !== 0){
+            return;
+        }
+
+        var head = $('<h2>');
+        head.addClass('situation-header');
+        head.html(textRenderer(situation.title));
+        div.append(head);
+
+        var table = renderCells(cells);
+        table.addClass('table table-bordered situation-table');
+        div.append(table);
+
+        div.append(extensionDiv.html());
+    };
+
+
+    /**
+     * Render parsed situations to cells and then to HTML
+     */
+    var renderWithJQuery = function (situations, jqueryDestination, filterLinesFunction, textRenderer) {
 
         // Render each situation
-        for (situationId in situations) {
+        for (var situationId in situations) {
             var div = $('<div>');
             div.attr('id', 'situation_wrapper_' + situationId);
-            div.addClass('situation-wrapper');
-
-            var head = $('<h2>');
-            head.addClass('situation-header');
-            head.html(textRenderer(situations[situationId].title));
-            div.append(head);
-
-            var cells = prepareCells(filterLinesFunction(situations[situationId]));
-            var extensionDiv = renderExtensions(situations[situationId].lines);
-                        
-            if (cells.length == 0 && extensionDiv.is(':empty')) {
-                continue;
-            }
-
-            var table = renderCells(cells);
-            table.addClass('table table-bordered situation-table');
-            div.append(table);
-
-            div.append(extensionDiv.html());
+            
+            renderSingleWithJQuery(situations[situationId], div, filterLinesFunction, textRenderer);
             $(jqueryDestination).append(div);
         }
     };
@@ -350,11 +374,9 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
         var div = $('<div>');
         div.addClass("revision-wrapper");
         
-        console.log(revisionData);
-
         var hash = revisions.revisionHash(revisionData);
 
-        for (i in revisionData) {
+        for (var i in revisionData) {
             var revision = revisionData[i];
 
             var row = $('<div>');
@@ -378,6 +400,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
         renderExtensions: renderExtensions,
         defaultCellRenderer: defaultCellRenderer,
         defaultTextRenderer: defaultTextRenderer,
+        renderSingleWithJQuery: renderSingleWithJQuery,
         renderWithJQuery: renderWithJQuery,
         renderRevisions: renderRevisions
     };

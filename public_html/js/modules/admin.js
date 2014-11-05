@@ -44,7 +44,7 @@ define(['jquery'], function ($) {
      */
     var fetch = function(resourceUri, callback){
         $.get(resourceUri).done(callback);
-    }
+    };
     
     return {
         save: save,

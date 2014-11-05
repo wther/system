@@ -45,7 +45,7 @@ define(['modules/bidParser'], function (bidParser) {
         var splitValue = str.split('-');
         var retVal = [];
 
-        for (lineNumber in splitValue) {
+        for (var lineNumber in splitValue) {
             var value = splitValue[lineNumber];
 
             if (value.length > 1) {
@@ -74,12 +74,12 @@ define(['modules/bidParser'], function (bidParser) {
         var tokens = splitBidding(rawBidding);
 
         var sequence = [], bids = [];
-        for (lineNumber in tokens) {
+        for (var lineNumber in tokens) {
             var parsedValue = bidParser.parseSingleBid(tokens[lineNumber]);
 
             sequence[sequence.length] = parsedValue.sequence;
 
-            for (lineNumber in parsedValue.embeddedBids) {
+            for (var lineNumber in parsedValue.embeddedBids) {
                 bids[bids.length] = parsedValue.embeddedBids[lineNumber];
             }
         }
@@ -147,7 +147,7 @@ define(['modules/bidParser'], function (bidParser) {
      * @param {type} content
      * @returns {undefined}
      */
-    var parse = function (content) {
+    var parse = function (content, callback) {
 
         var lines = content.split("\n");
 
@@ -161,9 +161,10 @@ define(['modules/bidParser'], function (bidParser) {
         var baseBidding = [];
         var biddingLines = [];
 
+        var retValSize = 0;
         var retVal = [];
         
-        for (lineNumber in lines) {
+        for (var lineNumber in lines) {
             try {
                 var line = lines[lineNumber].trim();
 
@@ -176,18 +177,26 @@ define(['modules/bidParser'], function (bidParser) {
                 if (line.length == 0) {
                     if (parseState == 'lines' && biddingLines.length > 0) {
                         parseState = 'title';
-                        retVal[retVal.length] = {
+                        
+                        var item = {
                             title: title,
                             baseBidding: baseBidding,
                             lines: biddingLines
                         };
+                        
+                        if(callback !== undefined){
+                            callback(item, retValSize++);
+                        } else {
+                            retVal[retVal.length] = item;
+                        }
+                        
                         title = '';
                         baseBidding = [];
                         biddingLines = [];
                     }
 
-                    // Parsing tite
-                } else if (parseState == 'title') {
+                // Parsing title
+                } else if (parseState === 'title') {
                     if (title.length > 0) {
                         throw new bidParser.ParserError("Ambigous title: " + title);
                     }
@@ -195,13 +204,13 @@ define(['modules/bidParser'], function (bidParser) {
                     parseState = 'baseBidding';
 
                     // Parsing base bidding
-                } else if (parseState == 'baseBidding') {
-                    if (baseBidding.length != 0) {
+                } else if (parseState === 'baseBidding') {
+                    if (baseBidding.length !== 0) {
                         throw new bidParser.ParserError("Ambigous base bidding: " + line);
                     }
                     
                     if (line.substr(-1) == '*' || line.substr(-1) == '?') {
-                        if (line.charAt(line.length-2) == '-') {
+                        if (line.charAt(line.length-2) === '-') {
                             line = line.substr(0, line.length - 2);
                         } else {
                             line = line.substr(0, line.length - 1);
@@ -218,6 +227,10 @@ define(['modules/bidParser'], function (bidParser) {
                 e.line = lineNumber;
                 throw e;
             }
+        }
+        
+        if(callback !== undefined){
+            return;
         }
 
         return retVal;

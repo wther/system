@@ -113,8 +113,8 @@ div.revision-line span.revision-button {
     margin: 0px 8px;
 }
 
-div.revision-formatter-0 span.revision-button { background-color: #dff0d8; }
-div.revision-cell-0 { border-right: 15px solid #dff0d8; }
+div.revision-formatter-0 span.revision-button { background-color: #C3E3B5; }
+div.revision-cell-0 { border-right: 15px solid #C3E3B5; }
 
 div.revision-formatter-1 span.revision-button { background-color: #d9edf7; }
 div.revision-cell-1 { border-right: 15px solid #d9edf7; }
@@ -136,6 +136,15 @@ div.revision-cell-6 { border-right: 15px solid #887690; }
 
 div.revision-formatter-7 span.revision-button { background-color: #B8AE7E; }
 div.revision-cell-7 { border-right: 15px solid #B8AE7E; }
+
+div.revision-formatter-8 span.revision-button { background-color: #EDC29A; }
+div.revision-cell-8 { border-right: 15px solid #EDC29A; }
+
+div.revision-formatter-9 span.revision-button { background-color: #EDC49A; }
+div.revision-cell-9 { border-right: 15px solid #EDC49A; }
+
+div.revision-formatter-10 span.revision-button { background-color: #94BAB2; }
+div.revision-cell-10 { border-right: 15px solid #94BAB2; }
 
 div.revision-line {
     margin: 30px 0px;

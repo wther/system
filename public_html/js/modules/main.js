@@ -57,6 +57,7 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         var content = $('#editor').val();
 
         // Parse text
+        hideError();
         try {
             var situations = parser.parse(content);
         } catch (e) {

@@ -70,7 +70,7 @@ try {
         $rows['latest'] = $row;
         $rows['revisions'] = array();
         
-        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE `system_id`='$system_id' GROUP BY(DATE(`date`)) ORDER BY `date` ASC LIMIT 10");
+        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE `system_id`='$system_id' GROUP BY(DATE(`date`)) ORDER BY `date` ASC LIMIT 15");
         
         while($row = $result->fetch_assoc()){
             $rows['revisions'][] = $row;

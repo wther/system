@@ -291,8 +291,10 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
         }
         
         div.addClass('situation-wrapper');
+        
+        var filtered = filterLinesFunction(situation);
 
-        var cells = prepareCells(filterLinesFunction(situation));
+        var cells = prepareCells(filtered);
         var extensionDiv = renderExtensions(situation.lines);
 
         /**
@@ -306,7 +308,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
          * There was something to be shown, but it this is a search, and only
          * relevant situations should be shown
          */
-        if(cells.length === 0 && situation.lines.length !== 0){
+        if(cells.length === 0 && situation.lines.length !== filtered.length){
             return;
         }
 

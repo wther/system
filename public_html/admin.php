@@ -70,7 +70,18 @@ try {
         $rows['latest'] = $row;
         $rows['revisions'] = array();
         
-        $result = query("SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` WHERE `system_id`='$system_id' GROUP BY(UNIX_TIMESTAMP(`date`) DIV (5*24*3600)) ORDER BY `date`");
+        
+        // We want to select all in ascending order
+        // We dont want to select more than 1 over a five day period,
+        // but from every five day period we want to select the most recent        
+        $query = "SELECT `revision_id`, `system_id`, `author`, `date`, `content` FROM `system_revisions` "
+                        . " WHERE `system_id`='$system_id' AND `date` IN " .
+                
+                        "(SELECT MAX(`date`) FROM `system_revisions`"
+                        . " WHERE `system_id`='$system_id' " . ""
+                        . " GROUP BY(UNIX_TIMESTAMP(`date`) DIV (5*24*3600)) ORDER BY `date` ASC)";
+        
+        $result = query($query);
         
         while($row = $result->fetch_assoc()){
             $rows['revisions'][] = $row;

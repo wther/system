@@ -128,6 +128,7 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
                 value: input[i].explanation,
                 tag: input[i].tag,
                 revision: input[i].revision,
+                title: input[i].revisionTitle,
                 height: 1
             };
 
@@ -221,6 +222,10 @@ define(['jquery', 'modules/revisions'], function ($, revisions) {
                     var innerDiv = $('<div>');
                     if (cells[y][x].height == 1 && cells[y][x].revision !== undefined) {
                         innerDiv.addClass('revision-cell-' + cells[y][x].revision);
+                    }
+                    
+                    if (cells[y][x].height == 1 && cells[y][x].title !== undefined) {
+                        innerDiv.attr('title', timeSince(new Date(cells[y][x].title)) + " ago");
                     }
 
                     if (x == cells[y].length - 1) {

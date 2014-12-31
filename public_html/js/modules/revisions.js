@@ -45,6 +45,7 @@ define([], function () {
         // Iterate backwards
         for(var i = revisions.length-2; i >= 0; i--){
             var current = revisions[i];
+            
             for(var j in result){
                 if(result[j] == last.date){
                     if(current.content.indexOf(j) >= 0){
@@ -58,7 +59,6 @@ define([], function () {
         return result;
     };
     
-    
     /**
      * Calculates a unique has for each date
      */
@@ -67,11 +67,37 @@ define([], function () {
         var takenClasses = {};
         var size = (revisions.length + 1);
         
-        for (i in revisions) {
+        // Select first the range of the dates of the revisions,
+        // the oldest should be the greenest (most known) and the
+        // newest should be the most red (most unknown)
+        
+        var dateMin = new Date();
+        var dateMax = new Date();
+        dateMax.setFullYear(dateMin.getFullYear() - 2);
+        
+        for(var i in revisions){
             var revision = revisions[i];
             var date = new Date(revision.date);
             
-            var hash = date.getTime() % size;
+            if(date < dateMin){
+                dateMin = date;
+            }
+            
+            if(date > dateMax){
+                dateMax = date;
+            }
+        }
+        
+        var range = (dateMax.getTime() - dateMin.getTime());
+        
+        for (var i in revisions) {
+            var revision = revisions[i];
+            var date = new Date(revision.date);
+            
+            // Where is this date between the dateMin and dateMax, if close to the
+            // dateMin make it around size-1, if its around dateMax make it 0
+            var hash = Math.floor(size - size * (date.getTime() - dateMin.getTime()) / range);
+            
             for(var j = 0; j < 200; j++){
                 if(takenClasses[hash] !== undefined){
                     hash = (hash + 1) % size;

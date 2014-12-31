@@ -40,6 +40,8 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
         if(e.fileName !== undefined) {
             text += " in file: " + e.fileName;
         }
+        
+        console.log(e);
 
         $('#error_text').html(text);
         throw e;
@@ -122,6 +124,7 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
                     var line = item.lines[j];
                     if(revisionCache[line.raw] !== undefined){
                         line['revision'] = hash[revisionCache[line.raw]];
+                        line['revisionTitle'] = revisionCache[line.raw];
                     }
                 }
                 
@@ -155,13 +158,36 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
 
         var token = $('#token').val();
         var content = $('#editor').val();
+        
+        // Make backup copy
+        localStorage.setItem("systembackup-" + token, content);
 
         $('#save_button').attr('disabled', 'disabled');
         admin.save(uri, author, token, content, function (data) {
             if (data.errorMessage !== undefined) {
                 alert(data.errorMessage);
+            } else {
+                alert("Saved successfully!");
             }
             $('#save_button').removeAttr('disabled');
+        });
+    };
+    
+    var setupRecover = function() {
+        $('#recover_button').click(function(){
+             
+            // The recover button recovers content from the JS
+            // localstorage stored with the token.
+            var token = $('#token').val();
+            var content = localStorage.getItem("systembackup-" + token);
+            
+            if(content !== undefined){
+                if(window.confirm("Are you sure you want to override the editor with content in your local storage? Changes will only be permanent when you save.")){
+                    $('#editor').val(content);
+                }
+            } else {
+                alert("There is no local save in your local storage. Sorry.");
+            }
         });
     };
 
@@ -185,6 +211,8 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
                 renderContent();
             });
         });
+        
+        setupRecover();
     };
 
     var setupWithoutEditor = function () {

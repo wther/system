@@ -23,18 +23,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-// Treat all date and time variables as UTC when using internal date manipulation
-date_default_timezone_set("Europe/Budapest");
 
-// Credentials for accessing the MySQL database
-$db_config = array(
-    'host' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'database' => 'system'
-);
+include_once ("config.php");
 
-$AUTH_TOKEN = '65b013e6d3cc63b103a48658861cb4dd';
+$db = connect($db_config);
 
 /**
  * Attempts to connect to MySQL database

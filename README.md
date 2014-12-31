@@ -26,7 +26,7 @@ Assuming that you have a LAMP stack, you would have to do the following things.
     
 3. Create a user with permissions to the database.
     
-4. Copy the public_html/php/db.example.php as public_html/php/db.php and replace the begining of the file with the previously created user's permission and the database access path. You may also want to set your own authentication token, so that even if people discover the location of you web service, they won't able to madle with your content. You may choose to hardcode this value in the editor.html or to ask people to enter it manually everytime.
+4. Copy the public_html/php/config.example.php as public_html/php/config.php and replace the begining of the file with the previously created user's permission and the database access path. You may also want to set your own authentication token, so that even if people discover the location of you web service, they won't able to madle with your content. You may choose to hardcode this value in the editor.html or to ask people to enter it manually everytime.
 
         // Credentials for accessing the MySQL database
         $db_config = array(
@@ -39,7 +39,7 @@ Assuming that you have a LAMP stack, you would have to do the following things.
         // Authorization token set in the editor.html
         $AUTH_TOKEN = '65b013e6d3cc63b103a48658861cb4dd'; 
 
-5. Finally setup Apache to direct to your *public_html* folder.
+5. Finally setup Apache to direct to the *public_html* folder.
 
 Do I have to use Apache and PHP?
 --------------------------------

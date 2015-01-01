@@ -23,7 +23,7 @@
  */
 
 require.config({
-    baseUrl: 'js',
+    baseUrl: '../js',
     shim: {
         "bootstrap": {"deps": ['jquery']}
     },

@@ -90,6 +90,10 @@ define([], function () {
         
         var range = (dateMax.getTime() - dateMin.getTime());
         
+        if(range <= 0){
+            range = 1;
+        }
+        
         for (var i in revisions) {
             var revision = revisions[i];
             var date = new Date(revision.date);

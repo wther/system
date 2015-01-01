@@ -79,9 +79,9 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
-  RewriteRule ^[a-z0-9_]+/editor\.html$ editor.html [L,QSA]
-  RewriteRule ^[a-z0-9_]+/index\.html$ render.html [L,QSA]
-  RewriteRule ^([a-z0-9_]+)/data.json$ admin.php?q=$1 [L,QSA]
-  RewriteRule ^([a-z0-9_]+)$ $1/index.html [R=301,L]
+  RewriteRule ^[a-z0-9_\-]+/editor\.html$ editor.html [L,QSA]
+  RewriteRule ^[a-z0-9_\-]+/index\.html$ render.html [L,QSA]
+  RewriteRule ^([a-z0-9_\-]+)/data.json$ admin.php?q=$1 [L,QSA]
+  RewriteRule ^([a-z0-9_\-]+)$ $1/index.html [R=301,L]
 
 </IfModule>

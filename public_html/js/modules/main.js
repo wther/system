@@ -26,6 +26,46 @@
  * Main module
  */
 define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admin', 'modules/matcher', 'modules/revisions', 'jquery'], function (parser, renderer, formatter, admin, matcher, revisions, $) {
+    var setSelectionRange = function(input, selectionStart, selectionEnd) {
+        if (input.setSelectionRange) {
+            input.focus();
+            input.setSelectionRange(selectionStart, selectionEnd);
+        }
+        else if (input.createTextRange) {
+            var range = input.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', selectionEnd);
+            range.moveStart('character', selectionStart);
+            range.select();
+        }
+    };
+    
+    var selectLine = function(inputId, lineNumber){
+        
+        var content = $('#' + inputId).val();
+                
+        var lineFound = 0;
+        var a = undefined;
+        var b = undefined;
+        lineNumber = parseInt(lineNumber);
+        
+        for(var i = 0; i < content.length; i++){
+                       
+            if(content.charAt(i) === '\n'){
+                ++lineFound;
+            }
+
+            if(lineFound === lineNumber-1){
+                a = i + 2;
+            }
+            
+            if(lineFound === lineNumber){
+                b = i+1;
+            }
+        }
+        setSelectionRange(document.getElementById(inputId), a, b);
+    };
+    
     var handleException = function (e) {
         var text = 'An error occured';
         if (e.message !== undefined) {
@@ -35,14 +75,16 @@ define(['modules/parser', 'modules/renderer', 'modules/formatter', 'modules/admi
 
         if (e.line !== undefined) {
             text += " in line: " + e.line;
+            
+            if($('#editor').length === 1){
+                selectLine('editor', e.line);
+            }
         }
         
         if(e.fileName !== undefined) {
             text += " in file: " + e.fileName;
         }
         
-        console.log(e);
-
         $('#error_text').html(text);
         throw e;
     };

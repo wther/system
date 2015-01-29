@@ -143,3 +143,10 @@ div.revision-cell-0 { border-right: 15px solid #ed7f73; }
 div.revision-line {
     margin: 30px 0px;
 }
+
+@media (min-width: 1200px) {
+    textarea#editor {
+        width: 45%;
+        position: fixed;
+    }
+}
